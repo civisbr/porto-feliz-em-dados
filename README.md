@@ -65,6 +65,8 @@ fetch (só rede)  →  data/raw/  →  build (puro, offline)  →  data/public/*
 | Inmetro | `medidores.json` do PSIE (SP) | coleta manual; guarda só os medidores de Porto Feliz, com hash |
 | OpenStreetMap | Overpass e Nominatim, à mão | `geocode_*.py` e `fetch_osm_base.py` rodam manualmente; uso moderado, ODbL |
 
+Detalhes, verificações e limitações de cada fonte estão em [`docs/fontes.md`](docs/fontes.md).
+
 ## Rodando localmente
 
 Requer Python 3.12+ e [uv](https://docs.astral.sh/uv/).
