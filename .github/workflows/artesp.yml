@@ -1,7 +1,8 @@
 name: artesp
 
 on:
-  # Sem agendamento enquanto o secret ARTESP_API_KEY não existe: o job falharia e abriria uma issue todo mês.
+  schedule:
+    - cron: "0 13 17 * *"
   workflow_dispatch:
 
 permissions: {}
