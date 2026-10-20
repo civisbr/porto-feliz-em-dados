@@ -1,0 +1,110 @@
+{
+  "anos": {
+    "2021": {
+      "agregadas": 0,
+      "anunciadas": 0,
+      "descartadas": {},
+      "janela": [
+        "2021-11-16",
+        "2021-12-31"
+      ],
+      "meses": [],
+      "sha256": "7d31f3c7d5fa1afc81a2e9246c2670ef84b97e43002d79bac3b9a409dc35fce9"
+    },
+    "2022": {
+      "agregadas": 7,
+      "anunciadas": 7,
+      "descartadas": {},
+      "janela": [
+        "2022-01-01",
+        "2022-12-31"
+      ],
+      "meses": [
+        4,
+        5,
+        7,
+        8,
+        9,
+        11
+      ],
+      "sha256": "243dcf471024b94404678398602c7f15406eff0f21000c946d15cd1691ef6752"
+    },
+    "2023": {
+      "agregadas": 11,
+      "anunciadas": 11,
+      "descartadas": {},
+      "janela": [
+        "2023-01-01",
+        "2023-12-31"
+      ],
+      "meses": [
+        1,
+        4,
+        6,
+        7,
+        9,
+        11,
+        12
+      ],
+      "sha256": "8e87e6f54dc5bd3db65f7c493a40b42370402cd134bed05ec12b88385913a2e0"
+    },
+    "2024": {
+      "agregadas": 11,
+      "anunciadas": 11,
+      "descartadas": {},
+      "janela": [
+        "2024-01-01",
+        "2024-12-31"
+      ],
+      "meses": [
+        2,
+        4,
+        6,
+        7,
+        8,
+        9,
+        11,
+        12
+      ],
+      "sha256": "075d8f622298145cc6aeb4388a3bf3c3bcbd9daee59d36d2f2b7448d2dec8459"
+    },
+    "2025": {
+      "agregadas": 12,
+      "anunciadas": 12,
+      "descartadas": {},
+      "janela": [
+        "2025-01-01",
+        "2025-12-31"
+      ],
+      "meses": [
+        2,
+        4,
+        5,
+        6,
+        9,
+        12
+      ],
+      "sha256": "5c6c39025bebab9131685025053824a9a4582014ec3fb8d6f92993097279f39f"
+    },
+    "2026": {
+      "agregadas": 7,
+      "anunciadas": 7,
+      "descartadas": {},
+      "janela": [
+        "2026-01-01",
+        "2026-10-20"
+      ],
+      "meses": [
+        2,
+        3,
+        4,
+        6,
+        8,
+        9,
+        10
+      ],
+      "sha256": "02728f4742c5f6b2b5ecf43514c825f7234e6d8d845333aba403ff1eea9e466c"
+    }
+  },
+  "verificado_em": "2026-10-20"
+}
