@@ -1,0 +1,120 @@
+{
+  "anos": {
+    "2022": {
+      "abas": [
+        "JAN-JUN_2022",
+        "JUL-DEZ_2022"
+      ],
+      "bytes_xlsx": 199282273,
+      "coletado_em": "2026-10-20",
+      "fora_do_ano": 0,
+      "fora_dos_grupos": 33,
+      "last_modified": "Tue, 30 Jun 2026 13:29:04 GMT",
+      "registros_municipio": 676,
+      "sem_coordenada_valida": 235,
+      "sem_natureza": 0,
+      "sha256_csv": {
+        "bairro": "ea37171ca2a5f60c0675694a31df4c9a74e9350c6cbb1b3ef9526bd9e3b69869",
+        "conduta": "6ee815a9dd2fa0410345cacaf7071b15cb05599bd6caed388876b698e759f8db",
+        "grade": "eca5c04651fd6dd50237754e934b4a0ecacf8b4ce464ed134bdb06e09c6db182",
+        "hora": "8425946ef2b5df8582373a91afe1cd8f7bfed8483ccdd5ecb8f16bf78c274064",
+        "mensal": "db0cd6349b4c9738ad9a992b60702ecc169ddda94d3856c692b56252b44fe409"
+      },
+      "sha256_xlsx": "608399e58e40da0d8dbb30d73db62add1408b4f354191c12f629b108b8f7e810",
+      "url": "https://www.ssp.sp.gov.br/assets/estatistica/transparencia/spDados/SPDadosCriminais_2022.xlsx"
+    },
+    "2023": {
+      "abas": [
+        "JAN-JUN_2023",
+        "JUL-DEZ_2023"
+      ],
+      "bytes_xlsx": 218413769,
+      "coletado_em": "2026-10-20",
+      "fora_do_ano": 0,
+      "fora_dos_grupos": 197,
+      "last_modified": "Tue, 30 Jun 2026 12:48:58 GMT",
+      "registros_municipio": 957,
+      "sem_coordenada_valida": 254,
+      "sem_natureza": 0,
+      "sha256_csv": {
+        "bairro": "4328124962916bdf1b13c68e3f5ede6d5c73bc5213a51edd5fd065953ed35ed5",
+        "conduta": "819547ed637b3583ef39edd83098db382354ce9fd6cb48044fa3f0553604a650",
+        "grade": "add608b4964b00dccf25e326c8af173fd95fe20b12613005eaf4ee1be579119d",
+        "hora": "b20cba27e6c768aba7d49e99711808e88c17845d8653291103445442fb50fd0a",
+        "mensal": "c5b3ecab737ab31724c3440968058b2f95c607b975efb155bf680e323aae9384"
+      },
+      "sha256_xlsx": "84c595a451251b3c532f4483a672134813e5ec3e224ca27db58ec4854ee801df",
+      "url": "https://www.ssp.sp.gov.br/assets/estatistica/transparencia/spDados/SPDadosCriminais_2023.xlsx"
+    },
+    "2024": {
+      "abas": [
+        "JAN-JUN_2024",
+        "JUL-DEZ_2024"
+      ],
+      "bytes_xlsx": 197574881,
+      "coletado_em": "2026-10-20",
+      "fora_do_ano": 0,
+      "fora_dos_grupos": 110,
+      "last_modified": "Tue, 30 Jun 2026 12:51:30 GMT",
+      "registros_municipio": 829,
+      "sem_coordenada_valida": 254,
+      "sem_natureza": 0,
+      "sha256_csv": {
+        "bairro": "31f5d38c058f60d4523ef280ebe8d9ecb32db4ae4f908bb5701ff1fdbd5552b5",
+        "conduta": "03c48ba11a6a6f974108423ad4a773b44052b866c799da6dd49f8083bf280fc6",
+        "grade": "1102324c92d42c42ca59b32aa15b0ce38fd53fc046147caac11491cec0cce06d",
+        "hora": "d255082e5463046db1ea123b3c151f71f517d84a9f8778dbceff5da23916d436",
+        "mensal": "bf95642e4b64c3f1a535eccc48265c2f6660c1ddfaeeed10a0f50524a46e348f"
+      },
+      "sha256_xlsx": "b58715efaf1128c971fc5113b5a856cbb29e3e09ece8706e2eec1827fbf10d26",
+      "url": "https://www.ssp.sp.gov.br/assets/estatistica/transparencia/spDados/SPDadosCriminais_2024.xlsx"
+    },
+    "2025": {
+      "abas": [
+        "JAN-JUN_2025",
+        "JUL-DEZ_2025"
+      ],
+      "bytes_xlsx": 195899014,
+      "coletado_em": "2026-10-20",
+      "fora_do_ano": 0,
+      "fora_dos_grupos": 86,
+      "last_modified": "Tue, 30 Jun 2026 12:53:42 GMT",
+      "registros_municipio": 963,
+      "sem_coordenada_valida": 210,
+      "sem_natureza": 0,
+      "sha256_csv": {
+        "bairro": "614d26f42a3ca0cc7656e4a5d757ab7f4c259143c3f067952e37c9be25bb89f0",
+        "conduta": "b4baa1ba0b7ea4bd6fc5dd6fd4293d331310b842802c3196717b7475c8531e23",
+        "grade": "7834b83a3681cd76ad22d7d858ee06608e688717a12a3367f6cd2b71e6474159",
+        "hora": "1f326cb84b6a20a25f9300eaebdfc8413a54e98d7368a014a1e4a4bb92e65ff4",
+        "mensal": "c1f31ac36fc0648fd47c0f25170c0935dc90c29e9b7b63597e1ae53ef8094a8b"
+      },
+      "sha256_xlsx": "4ab5b40229d245a0f50b65e74ea9e9b7750bbdb3bff7b02d961d78b9c4143d8c",
+      "url": "https://www.ssp.sp.gov.br/assets/estatistica/transparencia/spDados/SPDadosCriminais_2025.xlsx"
+    },
+    "2026": {
+      "abas": [
+        "JAN-JUN_2026",
+        "JUL-DEZ_2026"
+      ],
+      "bytes_xlsx": 126209129,
+      "coletado_em": "2026-10-20",
+      "fora_do_ano": 0,
+      "fora_dos_grupos": 49,
+      "last_modified": "Thu, 08 Oct 2026 14:27:12 GMT",
+      "registros_municipio": 582,
+      "sem_coordenada_valida": 73,
+      "sem_natureza": 0,
+      "sha256_csv": {
+        "bairro": "31d7822d0930901816d8c7ba72ce7d6cddde2cf9e9acaa5d23ea3215329b54fa",
+        "conduta": "56eccd9fa5a1b34e92851954e93392159f3cf92d18641395f99699c48c32e607",
+        "grade": "3bbb04b3c7930d893c5af7ae4b463706dd9193b3a99060c37961a64de548f983",
+        "hora": "0b1ec8c42f9382a16b48715b0dfc79c4bd067cf2bd5a4b414e6b9a7d49d1017c",
+        "mensal": "bb3c6fe2a6cd7f717e8c98fd2533ac73cc700fdce11995f300b0e3ea5ca47773"
+      },
+      "sha256_xlsx": "a2f003954f8c1c9912d242081fabb5736439af5fb2f7792298f9dc13305eff29",
+      "url": "https://www.ssp.sp.gov.br/assets/estatistica/transparencia/spDados/SPDadosCriminais_2026.xlsx"
+    }
+  },
+  "verificado_em": "2026-10-20"
+}

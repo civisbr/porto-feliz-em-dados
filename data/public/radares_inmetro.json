@@ -1,0 +1,127 @@
+{
+  "cobertura": {
+    "ibge": "3540606",
+    "municipio": "Porto Feliz",
+    "uf": "SP"
+  },
+  "dados": [
+    {
+      "certificado": "16059209",
+      "inmetros": "1244183; 1244184",
+      "lat": -23.35044,
+      "local": "RODOVIA SP 280 KM 97 + 700M",
+      "lon": -47.51573,
+      "n_faixas": 2,
+      "n_verificacoes": 12,
+      "posicao": "km",
+      "posicao_detalhe": "km 97,7, a 0,3 km do marco 98",
+      "recorte": "medidor",
+      "resultado": "Aprovado",
+      "series": "0766",
+      "tipo": "Fixo",
+      "ultima_verificacao": "2022-07-13",
+      "validade": "2023-07-12",
+      "validade_laudo": "2023-07-12",
+      "velocidades": ""
+    },
+    {
+      "certificado": "16430036",
+      "inmetros": "16073224",
+      "lat": -23.36829,
+      "local": "SP 097 KM 010,200",
+      "lon": -47.53346,
+      "n_faixas": 2,
+      "n_verificacoes": 1,
+      "posicao": "km",
+      "posicao_detalhe": "km 10,2, a 0,2 km do marco 10",
+      "recorte": "medidor",
+      "resultado": "Aprovado",
+      "series": "1544",
+      "tipo": "Fixo",
+      "ultima_verificacao": "2026-05-14",
+      "validade": "2027-05-13",
+      "validade_laudo": "2027-05-13",
+      "velocidades": "60"
+    },
+    {
+      "certificado": "16430038",
+      "inmetros": "16073225",
+      "lat": -23.28687,
+      "local": "SP 097 KM 019,400",
+      "lon": -47.52792,
+      "n_faixas": 2,
+      "n_verificacoes": 1,
+      "posicao": "km",
+      "posicao_detalhe": "km 19,4, a 0,4 km do marco 19",
+      "recorte": "medidor",
+      "resultado": "Aprovado",
+      "series": "1830",
+      "tipo": "Fixo",
+      "ultima_verificacao": "2026-05-14",
+      "validade": "2027-05-13",
+      "validade_laudo": "2027-05-13",
+      "velocidades": "80"
+    },
+    {
+      "certificado": "",
+      "inmetros": "",
+      "lat": -23.35044,
+      "local": "SP 280 KM097 + 700MTS",
+      "lon": -47.51573,
+      "n_faixas": 2,
+      "n_verificacoes": 0,
+      "posicao": "km",
+      "posicao_detalhe": "km 97,7, a 0,3 km do marco 98",
+      "recorte": "medidor",
+      "resultado": "Aprovado",
+      "series": "0952",
+      "tipo": "Fixo",
+      "ultima_verificacao": "2023-06-21",
+      "validade": "2024-06-20",
+      "validade_laudo": null,
+      "velocidades": "120"
+    },
+    {
+      "certificado": "16434105",
+      "inmetros": "15412791",
+      "lat": -23.35044,
+      "local": "SP-280 KM: 097,700",
+      "lon": -47.51573,
+      "n_faixas": 2,
+      "n_verificacoes": 3,
+      "posicao": "km",
+      "posicao_detalhe": "km 97,7, a 0,3 km do marco 98",
+      "recorte": "medidor",
+      "resultado": "Aprovado",
+      "series": "0952",
+      "tipo": "Fixo",
+      "ultima_verificacao": "2026-06-09",
+      "validade": "2027-06-08",
+      "validade_laudo": "2027-06-08",
+      "velocidades": ""
+    }
+  ],
+  "fonte": {
+    "acesso_em": "2026-10-20",
+    "licenca": "Creative Commons CCZero (dados.gov.br)",
+    "nome": "Inmetro — Portal de Serviços nos Estados (PSIE), medidores de velocidade",
+    "url": "https://dados.gov.br/dados/conjuntos-dados/portal-de-servicos-do-inmetro-nos-estados-psie"
+  },
+  "painel": "radares_inmetro",
+  "qualidade": {
+    "flag": "real",
+    "n_registros": 5,
+    "notas": [
+      "Situação da verificação metrológica do Inmetro, não da validade jurídica de uma multa: essa depende do auto de infração e da análise do órgão autuador.",
+      "Verificação vencida pode significar equipamento retirado ou substituído, e verificação em dia pode estar atrasada na base. Confirme sempre no portal oficial com o número do Inmetro da notificação.",
+      "As posições no mapa (OpenStreetMap, ODbL) vêm do endereço do cadastro: imóvel exato quando o OSM tem o número da porta e, nos demais, posição aproximada calculada sobre as vias, endereços e marcos de km do OSM (cruzamento, km da rodovia, número entre endereços vizinhos ou meio da via), com erro de dezenas de metros a alguns quilômetros. Este quadro lista os medidores da base do Inmetro em Porto Feliz.",
+      "SHA-256 do arquivo filtrado: 31409bcb908b375e43ef8a06c34a630493ed575115d524652ff191ce314701a5"
+    ]
+  },
+  "referencia": {
+    "fim": "2026-10-20",
+    "granularidade": "semanal",
+    "inicio": "2026-10-20"
+  },
+  "schema_version": "1.0"
+}

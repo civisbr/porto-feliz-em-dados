@@ -1,0 +1,283 @@
+{
+  "cobertura": {
+    "ibge": "3540606",
+    "municipio": "Porto Feliz",
+    "uf": "SP"
+  },
+  "dados": [
+    {
+      "ano": null,
+      "chave": "microrregiao",
+      "pct": null,
+      "recorte": "territorio",
+      "rotulo": "Microrregião",
+      "texto": "Sorocaba",
+      "unidade": null,
+      "valor": null
+    },
+    {
+      "ano": null,
+      "chave": "mesorregiao",
+      "pct": null,
+      "recorte": "territorio",
+      "rotulo": "Mesorregião",
+      "texto": "Macro Metropolitana Paulista",
+      "unidade": null,
+      "valor": null
+    },
+    {
+      "ano": null,
+      "chave": "regiao_imediata",
+      "pct": null,
+      "recorte": "territorio",
+      "rotulo": "Região geográfica imediata",
+      "texto": "Sorocaba",
+      "unidade": null,
+      "valor": null
+    },
+    {
+      "ano": null,
+      "chave": "regiao_intermediaria",
+      "pct": null,
+      "recorte": "territorio",
+      "rotulo": "Região geográfica intermediária",
+      "texto": "Sorocaba",
+      "unidade": null,
+      "valor": null
+    },
+    {
+      "ano": null,
+      "chave": "uf",
+      "pct": null,
+      "recorte": "territorio",
+      "rotulo": "Estado",
+      "texto": "São Paulo",
+      "unidade": null,
+      "valor": null
+    },
+    {
+      "ano": 2022,
+      "chave": "populacao_censo",
+      "pct": null,
+      "recorte": "indicador",
+      "rotulo": "População (Censo)",
+      "texto": null,
+      "unidade": "pessoas",
+      "valor": 56497.0
+    },
+    {
+      "ano": 2026,
+      "chave": "populacao_estimada",
+      "pct": null,
+      "recorte": "indicador",
+      "rotulo": "População estimada",
+      "texto": null,
+      "unidade": "pessoas",
+      "valor": 58837.0
+    },
+    {
+      "ano": 2022,
+      "chave": "area",
+      "pct": null,
+      "recorte": "indicador",
+      "rotulo": "Área",
+      "texto": null,
+      "unidade": "km²",
+      "valor": 556.706
+    },
+    {
+      "ano": 2022,
+      "chave": "densidade",
+      "pct": null,
+      "recorte": "indicador",
+      "rotulo": "Densidade demográfica",
+      "texto": null,
+      "unidade": "hab/km²",
+      "valor": 101.48
+    },
+    {
+      "ano": 2018,
+      "chave": "pib",
+      "pct": null,
+      "recorte": "pib_serie",
+      "rotulo": "PIB a preços correntes",
+      "texto": null,
+      "unidade": "R$ mil",
+      "valor": 2599523.0
+    },
+    {
+      "ano": 2019,
+      "chave": "pib",
+      "pct": null,
+      "recorte": "pib_serie",
+      "rotulo": "PIB a preços correntes",
+      "texto": null,
+      "unidade": "R$ mil",
+      "valor": 2997482.0
+    },
+    {
+      "ano": 2020,
+      "chave": "pib",
+      "pct": null,
+      "recorte": "pib_serie",
+      "rotulo": "PIB a preços correntes",
+      "texto": null,
+      "unidade": "R$ mil",
+      "valor": 3065172.0
+    },
+    {
+      "ano": 2021,
+      "chave": "pib",
+      "pct": null,
+      "recorte": "pib_serie",
+      "rotulo": "PIB a preços correntes",
+      "texto": null,
+      "unidade": "R$ mil",
+      "valor": 3754666.0
+    },
+    {
+      "ano": 2022,
+      "chave": "pib",
+      "pct": null,
+      "recorte": "pib_serie",
+      "rotulo": "PIB a preços correntes",
+      "texto": null,
+      "unidade": "R$ mil",
+      "valor": 4346577.0
+    },
+    {
+      "ano": 2023,
+      "chave": "pib",
+      "pct": null,
+      "recorte": "pib_serie",
+      "rotulo": "PIB a preços correntes",
+      "texto": null,
+      "unidade": "R$ mil",
+      "valor": 5067049.0
+    },
+    {
+      "ano": 2023,
+      "chave": "553",
+      "pct": null,
+      "recorte": "pib_participacao",
+      "rotulo": "Microrregião de Sorocaba",
+      "texto": null,
+      "unidade": "%",
+      "valor": 4.08
+    },
+    {
+      "ano": 2023,
+      "chave": "552",
+      "pct": null,
+      "recorte": "pib_participacao",
+      "rotulo": "Macro Metropolitana Paulista",
+      "texto": null,
+      "unidade": "%",
+      "valor": 1.85
+    },
+    {
+      "ano": 2023,
+      "chave": "497",
+      "pct": null,
+      "recorte": "pib_participacao",
+      "rotulo": "Estado de São Paulo",
+      "texto": null,
+      "unidade": "%",
+      "valor": 0.15
+    },
+    {
+      "ano": 2023,
+      "chave": "530",
+      "pct": null,
+      "recorte": "pib_participacao",
+      "rotulo": "Região Sudeste",
+      "texto": null,
+      "unidade": "%",
+      "valor": 0.09
+    },
+    {
+      "ano": 2023,
+      "chave": "496",
+      "pct": null,
+      "recorte": "pib_participacao",
+      "rotulo": "Brasil",
+      "texto": null,
+      "unidade": "%",
+      "valor": 0.05
+    },
+    {
+      "ano": 2021,
+      "chave": "agropecuaria",
+      "pct": 7.9,
+      "recorte": "vab_setor",
+      "rotulo": "Agropecuária",
+      "texto": null,
+      "unidade": "R$ mil",
+      "valor": 227393.0
+    },
+    {
+      "ano": 2021,
+      "chave": "industria",
+      "pct": 30.1,
+      "recorte": "vab_setor",
+      "rotulo": "Indústria",
+      "texto": null,
+      "unidade": "R$ mil",
+      "valor": 861157.0
+    },
+    {
+      "ano": 2021,
+      "chave": "servicos",
+      "pct": 52.6,
+      "recorte": "vab_setor",
+      "rotulo": "Serviços (exceto administração pública)",
+      "texto": null,
+      "unidade": "R$ mil",
+      "valor": 1505564.0
+    },
+    {
+      "ano": 2021,
+      "chave": "administracao_publica",
+      "pct": 9.4,
+      "recorte": "vab_setor",
+      "rotulo": "Administração, defesa, educação e saúde públicas",
+      "texto": null,
+      "unidade": "R$ mil",
+      "valor": 267988.0
+    },
+    {
+      "ano": 2021,
+      "chave": "total",
+      "pct": 100.0,
+      "recorte": "vab_setor",
+      "rotulo": "Valor adicionado bruto total",
+      "texto": null,
+      "unidade": "R$ mil",
+      "valor": 2862101.0
+    }
+  ],
+  "fonte": {
+    "acesso_em": "2026-10-20",
+    "licenca": "Dados abertos do IBGE",
+    "nome": "IBGE — Censo 2022, Estimativas de População e PIB dos Municípios",
+    "url": "https://sidra.ibge.gov.br/"
+  },
+  "painel": "cidade",
+  "qualidade": {
+    "flag": "real",
+    "n_registros": 25,
+    "notas": [
+      "Cada indicador traz o seu ano: Censo 2022, estimativa de população de 2026 e PIB até 2023.",
+      "PIB a preços correntes (nominal): os valores de anos diferentes não descontam inflação.",
+      "Estrutura do valor adicionado: 2021, o último ano em que o IBGE publicou os setores para o município.",
+      "O IBGE não publica PIB per capita nessa tabela, e não calculamos por conta própria.",
+      "SHA-256 do manifesto de coleta: da14b09ac7a992cbf3cf601f7887d7ae9c473b385f2145f4a21f55b5d7a84650"
+    ]
+  },
+  "referencia": {
+    "fim": "2026-12-31",
+    "granularidade": "anual",
+    "inicio": "2018-01-01"
+  },
+  "schema_version": "1.0"
+}

@@ -1,0 +1,108 @@
+{% extends "paineis/painel.html" %}
+{% from "_macros.html" import icone %}
+{% block resumo %}
+<section aria-labelledby="resumo" class="resumo-real">
+  <h2 id="resumo" class="rotulo-resumo">A rede hospitalar em números ({{ ref_hosp }})</h2>
+  <ul class="hosp-numeros">
+    <li><span class="cartao-numero">{{ resumo.n_hospitais }}</span><span class="pequeno">hospitais com leitos no CNES, {{ resumo.n_hospitais_sus }} deles atendendo pelo SUS</span></li>
+    <li><span class="cartao-numero">{{ resumo.leitos | num }}</span><span class="pequeno">leitos existentes, {{ resumo.leitos_sus | num }} à disposição do SUS</span></li>
+    <li><span class="cartao-numero">{{ resumo.uti | num }}</span><span class="pequeno">leitos de UTI, {{ resumo.uti_sus | num }} no SUS</span></li>
+    <li><span class="cartao-numero">{{ resumo.internacoes | num }}</span><span class="pequeno">internações SUS em 12 meses{% if resumo.pct_de_fora is not none %}; cerca de {{ resumo.pct_de_fora }}% de moradores de outras cidades{% endif %}</span></li>
+  </ul>
+  <p class="pequeno suave">Não existe dado aberto de lotação ou fila. O uso estimado de cada hospital, mostrado no cartão, é só uma ordem de grandeza dos leitos SUS usados nos últimos 12 meses; diferenças de poucos pontos entre hospitais não significam nada.</p>
+</section>
+{% endblock %}
+{% block scripts %}<script src="{{ raiz }}mapa-interativo.js" defer></script>{% endblock %}
+{% from "_mapa.html" import quadro, local, selecionada %}
+{% block explorar %}
+{% set ms = mapa_saude %}
+<section aria-labelledby="mapa" class="bloco-painel">
+  <h2 id="mapa" class="h2-medio sem-topo">Mapa das unidades de saúde</h2>
+  <p class="suave">{{ ms.pontos | length }} unidades no mapa. Passe o mouse ou toque num ponto para ver o nome, abra para ver endereço e telefone. <span data-so-js hidden>Informe onde você está para ver as mais próximas.</span></p>
+  <div class="mapa-saude mapa-interativo">
+    {% call quadro(mb, "Mapa de Porto Feliz com hospitais, UPAs, unidades básicas de saúde e CAPS", ms.nomes, ms.ordem, "Distância em linha reta, não pelo caminho. Em emergência, ligue 192 (SAMU).") %}
+    <g class="ms-unidades">{% for p in ms.pontos %}
+      <g class="ms-u g-{{ p.grupo }}" transform="translate({{ p.x }} {{ p.y }})" aria-label="{{ p.nome }}. {{ p.endereco }}"
+         data-grupo="{{ p.grupo }}" data-nome="{{ p.nome }}" data-resumo="{{ p.sus }}" data-detalhes="{{ p.detalhes | tojson | forceescape }}" data-lat="{{ p.lat }}" data-lon="{{ p.lon }}">
+        <title>{{ p.nome }}</title><use class="mk" href="#s-{{ p.grupo }}"/>
+      </g>{% endfor %}
+    </g>
+    {% endcall %}
+    <div class="mapa-lateral">
+      <fieldset class="ms-filtro" data-so-js hidden><legend>Legenda e filtro</legend>
+        {% for g in ms.grupos %}<label><input type="checkbox" value="{{ g.id }}" data-filtro="grupo" checked><svg class="ms-chave" viewBox="-16 -16 32 32" aria-hidden="true"><use href="#s-{{ g.id }}"/></svg><span>{{ g.nome }} <span class="suave">({{ g.n }})</span></span></label>{% endfor %}
+      </fieldset>
+      <ul class="ms-legenda-estatica" data-sem-js>{% for g in ms.grupos %}<li><svg class="ms-chave" viewBox="-16 -16 32 32" aria-hidden="true"><use href="#s-{{ g.id }}"/></svg>{{ g.nome }} ({{ g.n }})</li>{% endfor %}</ul>
+      {{ local("saude") }}
+      {{ selecionada() }}
+    </div>
+  </div>
+  <p class="pequeno suave"><span data-so-js hidden>Aproxime com + e −, ou com Ctrl e a roda do mouse; arraste para mover. </span>{% if ms.sem_posicao %}{{ ms.sem_posicao }} unidades do cadastro não têm coordenada válida e aparecem só nas listas abaixo. {% endif %}A distância é em linha reta, não pelo caminho, e as posições vêm do cadastro do CNES, que pode ter erros.</p>
+</section>
+
+<section aria-labelledby="hospitais" class="bloco-painel">
+  <h2 id="hospitais" class="h2-medio sem-topo">Hospitais</h2>
+  <p class="suave">Em ordem de internações SUS nos últimos 12 meses. O que cada hospital trata vem do diagnóstico principal das internações; os leitos, do cadastro do CNES.</p>
+  <ul class="hosp-lista">
+    {% for h in hospitais %}
+    <li class="quadro-card hosp-card">
+      <h3>{{ h.nome }}</h3>
+      <p class="pequeno suave">{{ h.natureza }} · {{ "atende pelo SUS" if h.atende_sus else "não atende pelo SUS" }}<br>{{ h.endereco }}{% if h.telefone %} · {{ h.telefone }}{% endif %}</p>
+      <dl class="hosp-dados">
+        <div><dt>Leitos</dt><dd>{{ h.leitos | num }}{% if h.atende_sus %} ({{ h.leitos_sus | num }} SUS){% endif %}</dd></div>
+        <div><dt>UTI</dt><dd>{{ h.leitos_uti | num }}{% if h.atende_sus and h.leitos_uti %} ({{ h.leitos_uti_sus | num }} SUS){% endif %}</dd></div>
+        <div><dt>Internações SUS em 12 meses</dt><dd>{% if h.internacoes is not none %}{{ h.internacoes | num }}{% else %}sem registro{% endif %}</dd></div>
+        {% if h.pct_de_fora is not none %}<div><dt>Pacientes de outras cidades</dt><dd>{{ h.pct_de_fora | brl1 }}%</dd></div>{% endif %}
+      </dl>
+      {% if h.internacoes %}<svg class="hosp-barra" viewBox="0 0 100 4" preserveAspectRatio="none" role="img" aria-label="Internações SUS em relação ao hospital com mais internações: {{ h.barra_internacoes }}%"><rect width="100" height="4" class="fundo"/><rect width="{{ h.barra_internacoes }}" height="4" class="valor"/></svg>{% endif %}
+      {% if h.uso is not none %}<p class="hosp-uso"><strong>Uso estimado dos leitos SUS: {{ h.uso | brl1 }}%</strong> <span class="pequeno suave">(dias de internação SUS em 12 meses ÷ (leitos SUS × 365); ordem de grandeza)</span></p>{% endif %}
+      {% if h.servicos %}<p><strong>Serviços:</strong> {{ h.servicos | join(", ") }}.</p>{% endif %}
+      {% if h.tratamentos %}<p><strong>O que mais trata (SUS):</strong> {% for t in h.tratamentos %}{{ t.nome | lower }} ({{ t.n | num }}){{ ", " if not loop.last else "." }}{% endfor %}</p>{% endif %}
+      <details class="tabela-mes"><summary>Leitos por especialidade{% if h.n_especialidades > h.especialidades | length %} (as {{ h.especialidades | length }} maiores de {{ h.n_especialidades }}){% endif %}</summary>
+        <div class="rolagem"><table>
+          <caption class="so-leitor">Leitos de {{ h.nome }} por especialidade</caption>
+          <thead><tr><th scope="col">Especialidade</th><th scope="col">Existentes</th><th scope="col">SUS</th></tr></thead>
+          <tbody>{% for e in h.especialidades %}<tr><th scope="row">{{ e.nome }}</th><td>{{ e.existentes | num }}</td><td>{{ e.sus | num }}</td></tr>{% endfor %}</tbody>
+        </table></div>
+      </details>
+      {% if h.por_especialidade %}<details class="tabela-mes"><summary>Internações SUS por tipo de leito</summary>
+        <ul class="setores">{% for e in h.por_especialidade %}<li><span class="nome">{{ e.nome }}</span><span class="val">{{ e.n | num }}</span></li>{% endfor %}</ul>
+      </details>{% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+</section>
+
+<section aria-labelledby="urgencia" class="bloco-painel">
+  <h2 id="urgencia" class="h2-medio sem-topo">UPAs e pronto atendimento</h2>
+  <ul class="rede-lista quadro-card">
+    {% for u in urgencias %}<li><strong>{{ u.nome }}</strong><span class="pequeno suave">{{ u.endereco }}{% if u.telefone %} · {{ u.telefone }}{% endif %}</span></li>{% endfor %}
+  </ul>
+  <p class="pequeno suave">Para emergências, o telefone é o 192 (SAMU).</p>
+</section>
+
+<section aria-labelledby="ubs" class="bloco-painel">
+  <h2 id="ubs" class="h2-medio sem-topo">Unidades básicas de saúde ({{ ubs | length }})</h2>
+  <p class="suave">Porta de entrada do SUS: consultas, vacinas, pré-natal e acompanhamento contínuo. Procure a unidade do seu bairro.</p>
+  <details class="tabela-mes quadro-card"><summary>Ver a lista completa</summary>
+    <ul class="rede-lista">{% for u in ubs %}<li><strong>{{ u.nome }}</strong><span class="pequeno suave">{{ u.endereco }}{% if u.telefone %} · {{ u.telefone }}{% endif %}</span></li>{% endfor %}</ul>
+  </details>
+</section>
+
+<section aria-labelledby="caps" class="bloco-painel">
+  <h2 id="caps" class="h2-medio sem-topo">Saúde mental: CAPS ({{ caps | length }})</h2>
+  <details class="tabela-mes quadro-card"><summary>Ver a lista completa</summary>
+    <ul class="rede-lista">{% for u in caps %}<li><strong>{{ u.nome }}</strong><span class="pequeno suave">{{ u.endereco }}{% if u.telefone %} · {{ u.telefone }}{% endif %}</span></li>{% endfor %}</ul>
+  </details>
+</section>
+<p class="pequeno suave">Fonte: <a href="{{ env.fonte.url }}">CNES e SIH/SUS (DATASUS)</a>, coletado em {{ env.fonte.acesso_em | data_br }}. <a href="{{ raiz }}data/saude_hospitais.json">saude_hospitais.json</a>.</p>
+{% endblock %}
+{% block metodologia %}<ul class="lista-curta">{% for n in env.qualidade.notas %}{% if not n.startswith("SHA-256") %}<li>{{ n }}</li>{% endif %}{% endfor %}</ul>{% endblock %}
+{% block proveniencia %}
+<dl class="proveniencia">
+  <dt>Fonte</dt><dd><a href="{{ env.fonte.url }}">{{ env.fonte.nome }}</a></dd>
+  <dt>Coletado em</dt><dd>{{ env.fonte.acesso_em | data_br }}</dd>
+  <dt>Dados</dt><dd><a href="{{ raiz }}data/saude_hospitais.json">saude_hospitais.json</a></dd>
+  <dt>Código</dt><dd><a href="{{ repo_url }}/blob/main/{{ script }}">{{ script }}</a></dd>
+</dl>
+{% endblock %}

@@ -1,0 +1,35 @@
+{
+  "acesso_em": "2026-10-20",
+  "arquivos": {
+    "censo_escolar": {
+      "ano": 2024,
+      "arquivo": "censo_escolar.csv",
+      "bytes_zip": 33829396,
+      "last_modified": "Wed, 08 Jul 2026 12:22:27 GMT",
+      "md5_declarado_inep": "04d691fe6d8d744de65f21ed65068ad6",
+      "sha256_filtrado": "dcc2fbef0c7f323114d7264beb5fea2fed51828a428e865cf3d2b70e304df575",
+      "sha256_zip": "ae29d81d45ddecef59e11eda39788cbfd30dfa1cc71be9d29f23051fc2d640db",
+      "url": "https://download.inep.gov.br/dados_abertos/microdados_censo_escolar_2024.zip"
+    },
+    "ideb_anos_finais": {
+      "ano": 2025,
+      "arquivo": "ideb_anos_finais.csv",
+      "bytes_zip": 80112586,
+      "last_modified": "Wed, 05 Aug 2026 20:14:34 GMT",
+      "md5_declarado_inep": "47eb0dc191844aec1d90d207dc940e40",
+      "sha256_filtrado": "5941bc09be7afbc06143281c8a11c982ac61cf58955a1233931b192944487bef",
+      "sha256_zip": "4115b81a02f05c908b27eab838e99978b8970b0fcadbf803ee3e69f296ccbc2d",
+      "url": "https://download.inep.gov.br/ideb/resultados/divulgacao_anos_finais_escolas_2025.zip"
+    },
+    "ideb_anos_iniciais": {
+      "ano": 2025,
+      "arquivo": "ideb_anos_iniciais.csv",
+      "bytes_zip": 112185922,
+      "last_modified": "Wed, 05 Aug 2026 20:14:35 GMT",
+      "md5_declarado_inep": "6b4ce48ddcc02b1d4daf08428427342b",
+      "sha256_filtrado": "9685f1e47cf68a5795905f7bfa04d66f11154a274d574554f55df3c32ed98b7e",
+      "sha256_zip": "6addade230d4e6419abee5d1f5177f26abaf7f6d80e7f986a08faac931b35080",
+      "url": "https://download.inep.gov.br/ideb/resultados/divulgacao_anos_iniciais_escolas_2025.zip"
+    }
+  }
+}

@@ -1,0 +1,149 @@
+{% extends "paineis/painel.html" %}
+{% from "_mapa.html" import quadro, local, selecionada %}
+{% block scripts %}<script src="{{ raiz }}mapa-interativo.js" defer></script>{% endblock %}
+{% from "_macros.html" import icone %}
+{% block resumo %}
+<section aria-labelledby="resumo" class="resumo-real">
+  <h2 id="resumo" class="rotulo-resumo">Sinistros com vítima nos últimos 12 meses</h2>
+  {% if ac_ult12 is not none %}<p class="numero-grande">{{ ac_ult12 | num }}</p>
+  <p class="resumo-texto">sinistros de trânsito registrados em Porto Feliz nos 12 meses até {{ ac_fim }}, segundo o Infosiga SP.</p>
+  <p class="pequeno suave">É o registro oficial de sinistros; não mede o risco de cada via.</p>
+  {% else %}<p class="pendente-texto">{{ icone("relogio") }} O Infosiga SP ainda não publicou sinistros suficientes para este resumo.</p>{% endif %}
+</section>
+{% endblock %}
+{% macro barras(g, id, titulo) %}
+<svg class="grafico" viewBox="0 0 {{ g.largura }} {{ g.altura }}" role="img" aria-labelledby="{{ id }}-t"><title id="{{ id }}-t">{{ titulo }}</title>
+  {% for b in g.barras %}<rect class="b-pos" x="{{ b.x }}" y="{{ b.y }}" width="{{ b.w }}" height="{{ b.h }}"><title>{{ b.rotulo }}: {{ b.valor | num }}</title></rect>{% endfor %}
+  <line class="zero" x1="0" x2="{{ g.largura }}" y1="{{ g.zero }}" y2="{{ g.zero }}"/>
+  {% for t in g.eixo_x %}<text class="eixo" x="{{ t.x }}" y="{{ g.y_rotulos }}" text-anchor="{{ t.ancora }}">{{ t.texto }}</text>{% endfor %}
+</svg>
+{% endmacro %}
+{% block explorar %}
+<section aria-labelledby="ac-t" class="bloco-painel">
+  <h2 id="ac-t" class="h2-medio sem-topo">Acidentes de trânsito (Infosiga SP)</h2>
+  {% if ac_ult12 is not none %}<p class="suave">Nos 12 meses até {{ ac_fim }}: <strong>{{ ac_ult12 | num }} sinistros</strong> com vítima registrados em Porto Feliz{% if ac_ant12 is not none %} (contra {{ ac_ant12 | num }} nos 12 meses anteriores){% endif %}, com <strong>{{ ac_mortes12 | num }} vítimas fatais</strong> registradas. O mês mais recente costuma subir quando o Detran-SP completa os registros.{% if ac_ant12 is none %} A comparação com os 12 meses anteriores não é mostrada: a parcela de notificações (registros incompletos, fora da contagem) mudou muito entre os períodos e a diferença não indicaria melhora ou piora.{% endif %}</p>{% else %}<p class="suave">Resumo dos últimos 12 meses indisponível: a série mensal tem meses faltando.</p>{% endif %}
+  {% if ac_notif_ano is not none %}<p class="pequeno suave">Em {{ ac_ano }}, {{ ac_notif_ano }}% dos registros são notificações e ficam fora de hora, dia, tipo, vias e mapa; esses detalhes subcontam {{ ac_ano }} e não se comparam com anos com menos notificações.</p>{% endif %}
+  <div class="grade-2">
+    <article class="quadro-card"><h3>Sinistros por mês</h3><p class="suave">Sem as notificações, que têm informação incompleta.</p>{{ barras(ac_mensal, "ac-m", "Sinistros de trânsito por mês em Porto Feliz") }}
+      <details class="tabela-mes"><summary>Ver os valores por mês</summary>
+        <div class="rolagem"><table>
+          <caption class="so-leitor">Sinistros, vítimas fatais e notificações por mês em Porto Feliz</caption>
+          <thead><tr><th scope="col">Mês</th><th scope="col">Sinistros</th><th scope="col">Vítimas fatais</th><th scope="col">Notificações (fora da contagem)</th></tr></thead>
+          <tbody>{% for m in ac_tabela %}<tr><th scope="row">{{ m.rotulo }}</th><td>{{ m.n | num }}</td><td>{{ m.mortes | num }}</td><td>{{ m.notif | num }}</td></tr>{% endfor %}</tbody>
+        </table></div>
+      </details></article>
+    <article class="quadro-card"><h3>Por hora do dia ({{ ac_ano }})</h3>{{ barras(ac_horas, "ac-h", "Sinistros por hora do dia em Porto Feliz") }}</article>
+    <article class="quadro-card"><h3>Por dia da semana ({{ ac_ano }})</h3><ul class="setores">{% for d in ac_dias %}<li><span class="nome">{{ d.nome }}</span><span class="val">{{ d.n | num }}</span><span class="setor-barra pos" style="width: {{ d.pct }}%"></span></li>{% endfor %}</ul></article>
+    <article class="quadro-card"><h3>Tipo de sinistro ({{ ac_ano }})</h3><ul class="setores">{% for t in ac_tipos %}<li><span class="nome">{{ t.nome }}</span><span class="val">{{ t.n | num }} ({{ t.pct | brl1 }}%)</span><span class="setor-barra pos" style="width: {{ t.pct }}%"></span></li>{% endfor %}</ul></article>
+  </div>
+  {% if ac_calor %}{% set c = ac_calor %}
+  <article class="quadro-card" style="margin-top:1.5rem">
+    <h3>Onde acontecem ({{ c.ano_ini }} a {{ c.ano }})</h3>
+    <p class="suave">Mapa de calor sobre o mapa da cidade (aproxime para ver as ruas): áreas de cerca de {{ c.lado_m | num }} m; quanto mais escuro, mais sinistros. Áreas com menos de {{ ac_celula_min }} registros no ano não aparecem.</p>
+    <div class="mapa-interativo">
+    {% call quadro(mb, "Mapa de calor de sinistros de trânsito em Porto Feliz: " ~ c.n_celulas ~ " áreas com " ~ c.legenda[0].ini ~ " a " ~ c.legenda[-1].fim ~ " sinistros em " ~ c.ano_ini ~ " a " ~ c.ano, vista=c.vista, rotulo_celula="sinistros nesta área") %}
+      <g class="ms-celulas">{% for q in c.celulas %}<rect class="ms-c calor-{{ q.nivel }}" x="{{ q.x }}" y="{{ q.y }}" width="{{ c.cw }}" height="{{ c.ch }}" data-n="{{ q.n }}"><title>{{ q.n | num }} sinistros nesta área</title></rect>{% endfor %}</g>
+    {% endcall %}
+    </div>
+    <ul class="legenda-calor">{% for l in c.legenda %}<li><span class="amostra-calor calor-{{ l.nivel }}"></span>{{ l.ini | num }}{% if l.fim != l.ini %}–{{ l.fim | num }}{% endif %}</li>{% endfor %}</ul>
+    <p class="pequeno suave">{{ c.cobertura | brl1 }}% dos sinistros desses anos têm coordenada válida. Não há pontos individuais nem data e hora exatas; sinistros fatais entram só na contagem mensal.</p>
+  </article>{% endif %}
+  <article class="quadro-card" style="margin-top:1.5rem">
+    <h3>Vias com mais sinistros ({{ ac_ano }})</h3>
+    <p class="suave">Vias com {{ ac_via_min }} ou mais sinistros no ano. <strong>Mais sinistros não significa via mais perigosa:</strong> vias grandes e movimentadas acumulam mais registros.</p>
+    <ol class="setores ranking">{% for v in ac_vias %}<li><span class="nome">{{ loop.index }}. {{ v.nome }}</span><span class="val">{{ v.n | num }}</span><span class="setor-barra pos" style="width: {{ v.pct }}%"></span></li>{% endfor %}</ol>
+  </article>
+  <p class="pequeno suave">Fonte: <a href="{{ env_ac.fonte.url }}">Infosiga SP (Detran-SP)</a>, {{ env_ac.fonte.licenca }}, coletado em {{ env_ac.fonte.acesso_em | data_br }}. <a href="{{ raiz }}data/infosiga.json">infosiga.json</a>.</p>
+</section>
+
+{% if env_rod %}<section aria-labelledby="rod-t" class="bloco-painel">
+  <h2 id="rod-t" class="h2-medio sem-topo">Acidentes nas rodovias de Porto Feliz (ARTESP)</h2>
+  <p class="suave">Nos 12 meses até {{ rod_ult12.fim }}: <strong>{{ rod_ult12.acidentes | num }} acidentes</strong> publicados pelo CCM da ARTESP nas rodovias concedidas que cortam o município, com <strong>{{ rod_ult12.fatais | num }} vítimas fatais</strong> e {{ rod_ult12.feridos | num }} feridos registrados, além de {{ rod_ult12.outras | num }} outras ocorrências. <strong>Não é o total de acidentes nas rodovias</strong>: a API traz só as ocorrências que o CCM publica, e a proporção de mortes é alta por isso. Também <strong>não se soma</strong> aos sinistros do Infosiga acima: as fontes se sobrepõem.</p>
+  {% if rod_ult12.sem_registro %}<p class="pequeno suave">Sem nenhum registro na fonte em {{ rod_ult12.sem_registro | join(", ") }}: pode ser lacuna da fonte, e não ausência de acidentes. Esses meses entram como zero no gráfico e no total.</p>{% endif %}
+  <div class="grade-2">
+    <article class="quadro-card"><h3>Acidentes por mês</h3>{{ barras(rod_mensal, "rod-m", "Acidentes por mês nas rodovias de Porto Feliz") }}
+      <details class="tabela-mes"><summary>Ver os valores por mês</summary>
+        <div class="rolagem"><table>
+          <caption class="so-leitor">Acidentes, vítimas fatais, feridos e outras ocorrências por mês nas rodovias de Porto Feliz</caption>
+          <thead><tr><th scope="col">Mês</th><th scope="col">Acidentes</th><th scope="col">Vítimas fatais</th><th scope="col">Feridos</th><th scope="col">Outras ocorrências</th></tr></thead>
+          <tbody>{% for m in rod_tabela %}{% if m.sem_registro %}<tr><th scope="row">{{ m.rotulo }}</th><td colspan="4">sem registro na fonte</td></tr>{% else %}<tr><th scope="row">{{ m.rotulo }}</th><td>{{ m.n | num }}</td><td>{{ m.fatais | num }}</td><td>{{ m.feridos | num }}</td><td>{{ m.outras | num }}</td></tr>{% endif %}{% endfor %}</tbody>
+        </table></div>
+      </details></article>
+    <article class="quadro-card"><h3>Por rodovia ({{ rod_ano }})</h3><ul class="setores">{% for v in rod_rodovias %}<li><span class="nome">{{ v.nome }}</span><span class="val">{{ v.n | num }}</span><span class="setor-barra pos" style="width: {{ v.pct }}%"></span></li>{% endfor %}</ul></article>
+    <article class="quadro-card"><h3>Tipo de acidente ({{ rod_ano }})</h3><ul class="setores">{% for t in rod_tipos %}<li><span class="nome">{{ t.nome }}</span><span class="val">{{ t.n | num }}</span><span class="setor-barra pos" style="width: {{ t.pct }}%"></span></li>{% endfor %}</ul></article>
+    <article class="quadro-card"><h3>Trechos de 5 km com mais acidentes ({{ rod_ano }})</h3><ul class="setores">{% for t in rod_trechos %}<li><span class="nome">{{ t.nome }}</span><span class="val">{{ t.n | num }}</span><span class="setor-barra pos" style="width: {{ t.pct }}%"></span></li>{% endfor %}</ul><p class="pequeno suave">Mais acidentes não significa trecho mais perigoso: depende do tráfego e da extensão.</p></article>
+  </div>
+  <p class="pequeno suave">Fonte: <a href="{{ env_rod.fonte.url }}" rel="noreferrer">ARTESP — Centro de Controle Multimodal</a> ({{ env_rod.fonte.licenca }}), coletado em {{ env_rod.fonte.acesso_em | data_br }}. <a href="{{ raiz }}data/artesp.json">artesp.json</a>.</p>
+</section>{% endif %}
+
+<section aria-labelledby="lista-t" class="bloco-painel">
+  <h2 id="lista-t" class="h2-medio sem-topo">Onde ficam os medidores do Inmetro</h2>
+  {% if inm_mapa %}
+  <article class="quadro-card">
+    <h3>Mapa dos medidores ({{ inm_pontos | length }} com posição)</h3>
+    <p class="suave">O cadastro do Inmetro traz o endereço, não as coordenadas; as posições vêm do OpenStreetMap.{% if inm_mapa.vista.split()[2] | float < inm_mapa.mapa.largura %} O mapa está aproximado da região dos pontos.{% endif %} Ponto tracejado e mais claro: posição só aproximada.</p>
+    <div class="mapa-saude mapa-interativo">
+    {% call quadro(mb, "Mapa com a posição de medidores de velocidade do Inmetro em Porto Feliz: " ~ (inm_pontos | length) ~ " pontos", {"inmetro-ok": "Medidor do Inmetro, verificação em dia", "inmetro-alerta": "Medidor do Inmetro, verificação vencida ou sem aprovação"}, "inmetro-alerta,inmetro-ok", "Posição aproximada, em linha reta.", vista=inm_mapa.vista, defs=false) %}
+      <g class="ms-unidades">
+      {% for p in inm_pontos %}<g class="ms-u g-{{ p.g }}{{ ' aprox' if p.aprox }}" transform="translate({{ p.x }} {{ p.y }})" aria-label="{{ p.nome }}: {{ 'verificação em dia' if p.g == 'inmetro-ok' else 'verificação vencida ou sem aprovação' }}" data-grupo="{{ p.g }}" data-vel="{{ p.vel }}" data-nome="{{ p.nome }}" data-resumo="{{ 'verificação em dia' if p.g == 'inmetro-ok' else 'ATENÇÃO: verificação vencida ou sem aprovação' }}" data-detalhes="{{ p.detalhes | tojson | forceescape }}" data-lat="{{ p.lat }}" data-lon="{{ p.lon }}"><use class="mk" href="#s-{{ p.g }}"/></g>{% endfor %}
+      </g>
+    {% endcall %}
+    <div class="mapa-lateral">
+      <fieldset class="ms-filtro" data-so-js hidden><legend>O que mostrar</legend>
+        <label><input type="checkbox" value="inmetro-alerta" data-filtro="grupo" checked><svg class="ms-chave" viewBox="-16 -16 32 32" aria-hidden="true"><use href="#s-inmetro-alerta"/></svg><span>Inmetro: verificação vencida ou sem aprovação <span class="suave">({{ inm_pontos | selectattr("g", "equalto", "inmetro-alerta") | list | length }})</span></span></label>
+        <label><input type="checkbox" value="inmetro-ok" data-filtro="grupo" checked><svg class="ms-chave" viewBox="-16 -16 32 32" aria-hidden="true"><use href="#s-inmetro-ok"/></svg><span>Inmetro: verificação em dia <span class="suave">({{ inm_pontos | selectattr("g", "equalto", "inmetro-ok") | list | length }})</span></span></label>
+      </fieldset>
+      {{ local("inmetro", "Medidor mais perto de você") }}
+      {{ selecionada() }}
+    </div>
+    </div>
+    <p class="pequeno suave">© colaboradores do <a href="https://www.openstreetmap.org/copyright" rel="noreferrer">OpenStreetMap</a> (ODbL). Erro típico de dezenas de metros. Para ver a rua, procure o endereço do cadastro no <a href="https://www.openstreetmap.org/" rel="noreferrer">OpenStreetMap</a>.</p>
+  </article>{% else %}<p class="pendente-texto">{{ icone("relogio") }} Ainda não há medidores com posição calculada.</p>{% endif %}
+</section>
+<section aria-labelledby="inmetro-t" class="bloco-painel">
+  <h2 id="inmetro-t" class="h2-medio sem-topo">Os radares estão com a verificação em dia?</h2>
+  <article class="quadro-card">
+    <p class="aviso-amostra">{{ icone("alerta") }}<span>Esta página mostra a situação <strong>de hoje</strong> da verificação metrológica do Inmetro. Ela não diz se uma multa é válida: isso depende do auto de infração, da data da infração e da análise do órgão autuador. Uma verificação vencida hoje não anula uma multa antiga nem dispensa o prazo de recurso ou de pagamento. Para a data da infração, consulte o histórico no portal oficial.</span></p>
+    <p class="suave">O Inmetro, por meio dos órgãos de metrologia dos estados, verifica os medidores de velocidade. O número do Inmetro aparece na notificação da multa. A consulta oficial é a do <a href="{{ inm_link }}" rel="noreferrer">Portal de Serviços do Inmetro nos Estados (PSIE)</a>.</p>
+    <p><strong>{{ inm_invalidos | length }} de {{ inm_total }} medidores de Porto Feliz na base do Inmetro estão com verificação vencida recentemente (até 6 meses) ou sem resultado aprovado.</strong> Situação em {{ inm_hoje }}, com dados coletados em {{ inm_coleta }}.{% if inm_antigos %} Outros {{ inm_antigos | length }} registros venceram há mais de 6 meses, muitos de equipamentos trocados, e ficam numa lista à parte, fora dessa conta.{% endif %}</p>
+    {% if inm_defasagem %}<p class="aviso-amostra">{{ icone("alerta") }}<span>A base do Inmetro não é atualizada aqui há {{ inm_defasagem }} dias; a situação pode ter mudado.</span></p>{% endif %}
+    <form class="filtro filtro-busca" id="inmetro-filtro" role="search" aria-label="Buscar medidor por local, número do Inmetro ou de série" hidden>
+      <div><label for="inmetro-busca">Número do Inmetro, número de série ou local</label><input id="inmetro-busca" type="search" autocomplete="off" placeholder="Ex.: número do Inmetro ou nome da avenida"></div>
+      <p class="pequeno suave" id="inmetro-contagem" role="status" aria-live="polite"></p>
+    </form>
+    <h3>Vencida recentemente ou sem resultado aprovado ({{ inm_invalidos | length }})</h3>
+    <div class="rolagem"><table id="inmetro-tabela-invalidos">
+      <caption class="so-leitor">Medidores de velocidade de Porto Feliz com verificação vencida recentemente ou sem resultado aprovado</caption>
+      <thead><tr><th scope="col">Local verificado</th><th scope="col">Nº Inmetro</th><th scope="col">Nº de série</th><th scope="col">km/h</th><th scope="col">Validade</th><th scope="col">Situação</th></tr></thead>
+      <tbody>{% for m in inm_invalidos %}<tr data-busca="{{ m.busca }}" data-digitos="{{ m.digitos }}"><th scope="row">{{ m.local }}{% if m.via_estadual %} <span class="suave">(via estadual ou concessão)</span>{% endif %}</th><td>{{ m.inmetros }}</td><td>{{ m.series }}</td><td>{{ m.velocidades or "—" }}</td><td>{{ m.validade_br }}</td><td>{{ m.situacao | capitalize }}{% if m.dias_vencida %} há {{ m.dias_vencida | num }} dias{% endif %}</td></tr>{% else %}<tr><td colspan="6">Nenhum medidor nesta situação na base do Inmetro.</td></tr>{% endfor %}</tbody>
+    </table></div>
+    <details class="tabela-mes"><summary>Ver os {{ inm_validos | length }} medidores com verificação em dia{% if inm_validos | selectattr("reparado") | list %} (inclui reparados com laudo aprovado vigente){% endif %}</summary>
+      <div class="rolagem"><table id="inmetro-tabela-validos">
+        <caption class="so-leitor">Medidores de velocidade de Porto Feliz com verificação em dia</caption>
+        <thead><tr><th scope="col">Local verificado</th><th scope="col">Nº Inmetro</th><th scope="col">Nº de série</th><th scope="col">km/h</th><th scope="col">Validade</th></tr></thead>
+        <tbody>{% for m in inm_validos %}<tr data-busca="{{ m.busca }}" data-digitos="{{ m.digitos }}"><th scope="row">{{ m.local }}{% if m.via_estadual %} <span class="suave">(via estadual ou concessão)</span>{% endif %}</th><td>{{ m.inmetros }}</td><td>{{ m.series }}</td><td>{{ m.velocidades or "—" }}</td><td>{{ m.validade_br }}{% if m.reparado %} (reparado; confirme no portal){% endif %}</td></tr>{% endfor %}</tbody>
+      </table></div>
+    </details>
+    {% if inm_antigos %}<details class="tabela-mes"><summary>Ver os {{ inm_antigos | length }} registros antigos (vencidos há mais de 6 meses)</summary>
+      <p class="pequeno suave">Registros que o Inmetro mantém sem nova verificação. Em vários, o mesmo endereço aparece com outro equipamento já verificado: o aparelho foi provavelmente trocado ou retirado. Não é possível saber pela base se ainda estão em operação.</p>
+      <div class="rolagem"><table id="inmetro-tabela-antigos">
+        <caption class="so-leitor">Registros antigos de medidores de velocidade de Porto Feliz, vencidos há mais de seis meses</caption>
+        <thead><tr><th scope="col">Local verificado</th><th scope="col">Nº Inmetro</th><th scope="col">Nº de série</th><th scope="col">Validade</th><th scope="col">Observação</th></tr></thead>
+        <tbody>{% for m in inm_antigos %}<tr data-busca="{{ m.busca }}" data-digitos="{{ m.digitos }}"><th scope="row">{{ m.local }}</th><td>{{ m.inmetros }}</td><td>{{ m.series }}</td><td>{{ m.validade_br }}</td><td>{% if m.substituido %}Há equipamento vigente no mesmo endereço{% else %}Vencido há {{ m.dias_vencida | num }} dias{% endif %}</td></tr>{% endfor %}</tbody>
+      </table></div>
+    </details>{% endif %}
+    <p class="pequeno suave">Fonte: <a href="{{ inm_dados }}" rel="noreferrer">Inmetro, dados abertos do PSIE</a> (licença CC0). A base inclui equipamentos em rodovias estaduais e concessionadas no município. Local e velocidade vêm do cadastro do Inmetro. <a href="{{ raiz }}data/radares_inmetro.json">radares_inmetro.json</a>.</p>
+  </article>
+</section>
+{% endblock %}
+{% block metodologia %}
+<ul class="lista-curta">{% for n in env_ac.qualidade.notas %}{% if not n.startswith("SHA-256") %}<li>{{ n }}</li>{% endif %}{% endfor %}{% if env_rod %}{% for n in env_rod.qualidade.notas %}{% if not n.startswith("SHA-256") %}<li>{{ n }}</li>{% endif %}{% endfor %}{% endif %}{% for n in env_inm.qualidade.notas %}{% if not n.startswith("SHA-256") %}<li>{{ n }}</li>{% endif %}{% endfor %}</ul>
+{% endblock %}
+{% block proveniencia %}
+<dl class="proveniencia">
+  <dt>Fonte</dt><dd><a href="{{ env_inm.fonte.url }}">{{ env_inm.fonte.nome }}</a></dd>
+  <dt>Coletado em</dt><dd>{{ env_inm.fonte.acesso_em | data_br }}</dd>
+  <dt>Dados</dt><dd><a href="{{ raiz }}data/radares_inmetro.json">radares_inmetro.json</a></dd>
+  <dt>Código</dt><dd><a href="{{ repo_url }}/blob/main/{{ script }}">{{ script }}</a></dd>
+</dl>
+{% endblock %}

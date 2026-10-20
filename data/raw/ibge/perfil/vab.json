@@ -1,0 +1,152 @@
+[
+ {
+  "id": "498",
+  "resultados": [
+   {
+    "classificacoes": [],
+    "series": [
+     {
+      "localidade": {
+       "id": "3540606",
+       "nivel": {
+        "id": "N6",
+        "nome": "Município"
+       },
+       "nome": "Porto Feliz (SP)"
+      },
+      "serie": {
+       "2018": "2053863",
+       "2019": "2378526",
+       "2020": "2389604",
+       "2021": "2862101",
+       "2022": "...",
+       "2023": "..."
+      }
+     }
+    ]
+   }
+  ],
+  "unidade": "Mil Reais",
+  "variavel": "Valor adicionado bruto a preços correntes total"
+ },
+ {
+  "id": "513",
+  "resultados": [
+   {
+    "classificacoes": [],
+    "series": [
+     {
+      "localidade": {
+       "id": "3540606",
+       "nivel": {
+        "id": "N6",
+        "nome": "Município"
+       },
+       "nome": "Porto Feliz (SP)"
+      },
+      "serie": {
+       "2018": "147966",
+       "2019": "179914",
+       "2020": "200623",
+       "2021": "227393",
+       "2022": "...",
+       "2023": "..."
+      }
+     }
+    ]
+   }
+  ],
+  "unidade": "Mil Reais",
+  "variavel": "Valor adicionado bruto a preços correntes da agropecuária"
+ },
+ {
+  "id": "517",
+  "resultados": [
+   {
+    "classificacoes": [],
+    "series": [
+     {
+      "localidade": {
+       "id": "3540606",
+       "nivel": {
+        "id": "N6",
+        "nome": "Município"
+       },
+       "nome": "Porto Feliz (SP)"
+      },
+      "serie": {
+       "2018": "631296",
+       "2019": "673752",
+       "2020": "645662",
+       "2021": "861157",
+       "2022": "...",
+       "2023": "..."
+      }
+     }
+    ]
+   }
+  ],
+  "unidade": "Mil Reais",
+  "variavel": "Valor adicionado bruto a preços correntes da indústria"
+ },
+ {
+  "id": "6575",
+  "resultados": [
+   {
+    "classificacoes": [],
+    "series": [
+     {
+      "localidade": {
+       "id": "3540606",
+       "nivel": {
+        "id": "N6",
+        "nome": "Município"
+       },
+       "nome": "Porto Feliz (SP)"
+      },
+      "serie": {
+       "2018": "1033726",
+       "2019": "1274760",
+       "2020": "1280601",
+       "2021": "1505564",
+       "2022": "...",
+       "2023": "..."
+      }
+     }
+    ]
+   }
+  ],
+  "unidade": "Mil Reais",
+  "variavel": "Valor adicionado bruto a preços correntes dos serviços, exclusive administração, defesa, educação e saúde públicas e seguridade social"
+ },
+ {
+  "id": "525",
+  "resultados": [
+   {
+    "classificacoes": [],
+    "series": [
+     {
+      "localidade": {
+       "id": "3540606",
+       "nivel": {
+        "id": "N6",
+        "nome": "Município"
+       },
+       "nome": "Porto Feliz (SP)"
+      },
+      "serie": {
+       "2018": "240874",
+       "2019": "250100",
+       "2020": "262719",
+       "2021": "267988",
+       "2022": "...",
+       "2023": "..."
+      }
+     }
+    ]
+   }
+  ],
+  "unidade": "Mil Reais",
+  "variavel": "Valor adicionado bruto a preços correntes da administração, defesa, educação e saúde públicas e seguridade social"
+ }
+]

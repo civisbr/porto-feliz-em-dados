@@ -1,0 +1,75 @@
+{% extends "paineis/painel.html" %}
+{% from "_macros.html" import icone %}
+{% block resumo %}
+<section aria-labelledby="resumo" class="resumo-real">
+  <h2 id="resumo" class="rotulo-resumo">Prefeitura de Porto Feliz, {{ prefeito.mandato }}</h2>
+  <p class="numero-grande nome-grande">{{ prefeito.nome | nome_br }}</p>
+  <p class="resumo-texto">{{ prefeito.partido }} ({{ rotulo_bloco(prefeito.bloco) | lower }}), prefeito eleito em {{ prefeito.eleicao }}. Vice: <strong>{{ vice.nome | nome_br }}</strong> ({{ vice.partido }}, {{ rotulo_bloco(vice.bloco) | lower }}). Mandato {{ prefeito.mandato }}.</p>
+  <p class="pequeno suave">O TSE informa quem foi eleito. Afastamentos ou substituições durante o mandato não aparecem nesta lista.</p>
+</section>
+{% endblock %}
+{% block explorar %}
+<section aria-labelledby="ideo-t" class="bloco-painel">
+  <h2 id="ideo-t" class="h2-medio sem-topo">Posição dos partidos na Câmara Municipal</h2>
+  <p class="suave">Como os especialistas em ciência política classificam os partidos dos {{ bloco_classificados }} vereadores eleitos em 2024 que têm classificação. É a posição do <strong>partido</strong>, não do vereador, e a classificação é da pesquisa citada abaixo, não do site.</p>
+  <article class="quadro-card">
+    <div class="barra-bloco" role="img" aria-label="{% for b in blocos %}{{ b.nome }} {{ b.pct | brl1 }}% ({{ b.n }} vereadores){{ '; ' if not loop.last else '.' }}{% endfor %}">
+      {% for b in blocos if b.n %}<div class="seg-bloco bloco-{{ b.id }}" style="width: {{ b.pct }}%"><span>{% if b.pct >= 20 %}{{ b.nome }} {% endif %}{{ b.pct | brl1 }}%</span></div>{% endfor %}
+    </div>
+    <ul class="legenda-bloco">{% for b in blocos %}<li><span class="chip-bloco bloco-{{ b.id }}"></span>{{ b.nome }}: <strong>{{ b.n }}</strong> de {{ bloco_classificados }} ({{ b.pct | brl1 }}%)</li>{% endfor %}</ul>
+    <details class="tabela-mes"><summary>Ver os partidos de cada bloco</summary>
+      {% for b in blocos if b.n %}<h4 class="h3-sec"><span class="chip-bloco bloco-{{ b.id }}"></span>{{ b.nome }}</h4>
+      <ul class="lista-simples lista-1col">{% for p, c, n in b.partidos %}<li><span>{{ p }} <span class="suave">({{ n }})</span></span> <span class="suave">{{ c }}</span></li>{% endfor %}</ul>{% endfor %}
+    </details>
+    {% if bloco_sem_classificacao %}<p class="pequeno suave">Sem classificação na fonte, fora dos percentuais: {% for nome, partido in bloco_sem_classificacao %}{{ nome | nome_br }} ({{ partido }}){{ ", " if not loop.last else "." }}{% endfor %}</p>{% endif %}
+    <p class="pequeno suave">Esquerda reúne extrema esquerda e esquerda; centro reúne centro-esquerda, centro e centro-direita; direita reúne direita e extrema direita. Esse agrupamento em três blocos é uma escolha deste projeto sobre as sete categorias da pesquisa, e a fonte aponta que quase nenhum partido fica no centro exato. Fonte: Bolognesi, Ribeiro, Codato e Silva, <em>Opinião Pública</em> (2025), <a href="https://doi.org/10.1590/1807-0191202531120">doi 10.1590/1807-0191202531120</a>, pesquisas com especialistas de 2018 e 2022 (categoria final pela média ponderada).</p>
+  </article>
+</section>
+
+<section aria-labelledby="ver-t" class="bloco-painel">
+  <h2 id="ver-t" class="h2-medio sem-topo">Câmara Municipal ({{ vereadores | length }} vereadores eleitos em 2024)</h2>
+  <div class="grade-2">
+    <article class="quadro-card">
+      <h3>Vereadores</h3>
+      <ul class="lista-simples">{% for v in vereadores %}<li><span>{{ v.nome | nome_br }}</span> <span class="suave"><span class="chip-bloco bloco-{{ v.bloco or 'nenhum' }}" aria-hidden="true"></span>{{ v.partido }} <span class="so-leitor">({{ rotulo_bloco(v.bloco) }})</span></span></li>{% endfor %}</ul>
+    </article>
+    <article class="quadro-card">
+      <h3>Cadeiras por partido</h3><p class="suave">Quantos vereadores cada partido elegeu em 2024.</p>
+      <ul class="setores">{% for p, n in partidos %}<li><span class="nome">{{ p }}</span><span class="val">{{ n }}</span><span class="setor-barra pos" style="width: {{ n / partidos[0][1] * 100 }}%"></span></li>{% endfor %}</ul>
+    </article>
+  </div>
+</section>
+
+<section aria-labelledby="dep-t" class="bloco-painel">
+  <h2 id="dep-t" class="h2-medio sem-topo">Deputados mais votados em Porto Feliz</h2>
+  <p class="suave">Deputados são eleitos pelo estado inteiro. Abaixo, os {{ topo }} eleitos que receberam mais votos nominais em Porto Feliz em cada eleição.</p>
+  {% for titulo, blocos in deputados %}
+  <h3 class="h3-sec">{{ titulo }}</h3>
+  <div class="grade-2">
+    {% for sub, lista in blocos %}
+    <article class="quadro-card">
+      <h4>{{ sub }}</h4>
+      <div class="rolagem"><table>
+        <caption class="so-leitor">{{ titulo }}: {{ sub }}</caption>
+        <thead><tr><th scope="col">Nome</th><th scope="col">Partido na eleição</th><th scope="col">Votos na cidade</th><th scope="col">% na cidade</th>{% if lista and lista[0].eleicao == 2022 %}<th scope="col">Em exercício em {{ env.fonte.acesso_em | data_br }}</th>{% endif %}</tr></thead>
+        <tbody>{% for r in lista %}<tr><th scope="row">{{ r.nome | nome_br }}</th><td><span class="chip-bloco bloco-{{ r.bloco or 'nenhum' }}" aria-hidden="true"></span>{{ r.partido }} <span class="so-leitor">({{ rotulo_bloco(r.bloco) }})</span></td><td>{{ r.votos_na_cidade | num }}</td><td>{{ r.pct_votos_na_cidade | brl1 }}%</td>{% if r.eleicao == 2022 %}<td>{{ "Confirmado" if r.em_exercicio else "Sem confirmação" }}</td>{% endif %}</tr>{% endfor %}</tbody>
+      </table></div>
+    </article>
+    {% endfor %}
+  </div>
+  {% endfor %}
+  <p class="pequeno suave">“Sem confirmação” significa que não achamos um nome correspondente na lista oficial de deputados em exercício (Câmara ou Alesp), por exemplo por licença ou por grafia diferente. Não indica irregularidade.</p>
+</section>
+{% endblock %}
+{% block metodologia %}
+<ul class="lista-curta">{% for n in env.qualidade.notas %}{% if not n.startswith("SHA-256") %}<li>{{ n }}</li>{% endif %}{% endfor %}</ul>
+{% endblock %}
+{% block proveniencia %}
+<dl class="proveniencia">
+  <dt>Fontes</dt><dd><a href="https://dadosabertos.tse.jus.br/">TSE</a>, <a href="https://dadosabertos.camara.leg.br/">Câmara dos Deputados</a>, <a href="https://www.al.sp.gov.br/dados-abertos/">Alesp</a></dd>
+  <dt>Eleições</dt><dd>{{ ref_rep }}</dd>
+  <dt>Coletado em</dt><dd>{{ env.fonte.acesso_em | data_br }}</dd>
+  <dt>Dados</dt><dd><a href="{{ raiz }}data/representantes.json">representantes.json</a></dd>
+  <dt>Código</dt><dd><a href="{{ repo_url }}/blob/main/{{ script }}">{{ script }}</a></dd>
+</dl>
+{% endblock %}

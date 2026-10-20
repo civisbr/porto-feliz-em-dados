@@ -1,0 +1,671 @@
+{
+  "cobertura": {
+    "ibge": "3540606",
+    "municipio": "Porto Feliz",
+    "uf": "SP"
+  },
+  "dados": [
+    {
+      "ano": 2022,
+      "bloco": "nasc_baixo_peso",
+      "categoria": "",
+      "n": 57,
+      "recorte": "indicador"
+    },
+    {
+      "ano": 2022,
+      "bloco": "nasc_cesarea",
+      "categoria": "",
+      "n": 394,
+      "recorte": "indicador"
+    },
+    {
+      "ano": 2022,
+      "bloco": "nasc_gestacao_valida",
+      "categoria": "",
+      "n": 609,
+      "recorte": "indicador"
+    },
+    {
+      "ano": 2022,
+      "bloco": "nasc_idade_mae_valida",
+      "categoria": "",
+      "n": 609,
+      "recorte": "indicador"
+    },
+    {
+      "ano": 2022,
+      "bloco": "nasc_mae_ate19",
+      "categoria": "",
+      "n": 47,
+      "recorte": "indicador"
+    },
+    {
+      "ano": 2022,
+      "bloco": "nasc_parto_valido",
+      "categoria": "",
+      "n": 609,
+      "recorte": "indicador"
+    },
+    {
+      "ano": 2022,
+      "bloco": "nasc_peso_valido",
+      "categoria": "",
+      "n": 609,
+      "recorte": "indicador"
+    },
+    {
+      "ano": 2022,
+      "bloco": "nasc_prematuro",
+      "categoria": "",
+      "n": 62,
+      "recorte": "indicador"
+    },
+    {
+      "ano": 2022,
+      "bloco": "nasc_prenatal_7ou_mais",
+      "categoria": "",
+      "n": 548,
+      "recorte": "indicador"
+    },
+    {
+      "ano": 2022,
+      "bloco": "nasc_prenatal_valido",
+      "categoria": "",
+      "n": 608,
+      "recorte": "indicador"
+    },
+    {
+      "ano": 2022,
+      "bloco": "nasc_total",
+      "categoria": "",
+      "n": 609,
+      "recorte": "indicador"
+    },
+    {
+      "ano": 2022,
+      "bloco": "obito_capitulo",
+      "categoria": "Causas externas (acidentes e violência)",
+      "n": 28,
+      "recorte": "indicador"
+    },
+    {
+      "ano": 2022,
+      "bloco": "obito_capitulo",
+      "categoria": "Doenças do aparelho digestivo",
+      "n": 22,
+      "recorte": "indicador"
+    },
+    {
+      "ano": 2022,
+      "bloco": "obito_capitulo",
+      "categoria": "Doenças do aparelho urinário e genital",
+      "n": 13,
+      "recorte": "indicador"
+    },
+    {
+      "ano": 2022,
+      "bloco": "obito_capitulo",
+      "categoria": "Doenças do coração e da circulação",
+      "n": 100,
+      "recorte": "indicador"
+    },
+    {
+      "ano": 2022,
+      "bloco": "obito_capitulo",
+      "categoria": "Doenças do sistema nervoso",
+      "n": 22,
+      "recorte": "indicador"
+    },
+    {
+      "ano": 2022,
+      "bloco": "obito_capitulo",
+      "categoria": "Doenças endócrinas e metabólicas",
+      "n": 21,
+      "recorte": "indicador"
+    },
+    {
+      "ano": 2022,
+      "bloco": "obito_capitulo",
+      "categoria": "Doenças infecciosas e parasitárias",
+      "n": 42,
+      "recorte": "indicador"
+    },
+    {
+      "ano": 2022,
+      "bloco": "obito_capitulo",
+      "categoria": "Doenças respiratórias",
+      "n": 41,
+      "recorte": "indicador"
+    },
+    {
+      "ano": 2022,
+      "bloco": "obito_capitulo",
+      "categoria": "Sintomas e sinais não classificados",
+      "n": 22,
+      "recorte": "indicador"
+    },
+    {
+      "ano": 2022,
+      "bloco": "obito_capitulo",
+      "categoria": "Transtornos mentais e comportamentais",
+      "n": 5,
+      "recorte": "indicador"
+    },
+    {
+      "ano": 2022,
+      "bloco": "obito_capitulo",
+      "categoria": "Tumores (neoplasias)",
+      "n": 74,
+      "recorte": "indicador"
+    },
+    {
+      "ano": 2022,
+      "bloco": "obito_externa",
+      "categoria": "Acidentes de transporte",
+      "n": 11,
+      "recorte": "indicador"
+    },
+    {
+      "ano": 2022,
+      "bloco": "obito_externa",
+      "categoria": "Suicídios",
+      "n": 8,
+      "recorte": "indicador"
+    },
+    {
+      "ano": 2022,
+      "bloco": "obito_faixa",
+      "categoria": "1 a 14 anos",
+      "n": 6,
+      "recorte": "indicador"
+    },
+    {
+      "ano": 2022,
+      "bloco": "obito_faixa",
+      "categoria": "15 a 29 anos",
+      "n": 10,
+      "recorte": "indicador"
+    },
+    {
+      "ano": 2022,
+      "bloco": "obito_faixa",
+      "categoria": "30 a 59 anos",
+      "n": 73,
+      "recorte": "indicador"
+    },
+    {
+      "ano": 2022,
+      "bloco": "obito_faixa",
+      "categoria": "60 a 79 anos",
+      "n": 172,
+      "recorte": "indicador"
+    },
+    {
+      "ano": 2022,
+      "bloco": "obito_faixa",
+      "categoria": "80 anos ou mais",
+      "n": 137,
+      "recorte": "indicador"
+    },
+    {
+      "ano": 2022,
+      "bloco": "obito_total",
+      "categoria": "",
+      "n": 401,
+      "recorte": "indicador"
+    },
+    {
+      "ano": 2023,
+      "bloco": "nasc_baixo_peso",
+      "categoria": "",
+      "n": 48,
+      "recorte": "indicador"
+    },
+    {
+      "ano": 2023,
+      "bloco": "nasc_cesarea",
+      "categoria": "",
+      "n": 405,
+      "recorte": "indicador"
+    },
+    {
+      "ano": 2023,
+      "bloco": "nasc_gestacao_valida",
+      "categoria": "",
+      "n": 563,
+      "recorte": "indicador"
+    },
+    {
+      "ano": 2023,
+      "bloco": "nasc_idade_mae_valida",
+      "categoria": "",
+      "n": 563,
+      "recorte": "indicador"
+    },
+    {
+      "ano": 2023,
+      "bloco": "nasc_mae_ate19",
+      "categoria": "",
+      "n": 46,
+      "recorte": "indicador"
+    },
+    {
+      "ano": 2023,
+      "bloco": "nasc_parto_valido",
+      "categoria": "",
+      "n": 563,
+      "recorte": "indicador"
+    },
+    {
+      "ano": 2023,
+      "bloco": "nasc_peso_valido",
+      "categoria": "",
+      "n": 563,
+      "recorte": "indicador"
+    },
+    {
+      "ano": 2023,
+      "bloco": "nasc_prematuro",
+      "categoria": "",
+      "n": 49,
+      "recorte": "indicador"
+    },
+    {
+      "ano": 2023,
+      "bloco": "nasc_prenatal_7ou_mais",
+      "categoria": "",
+      "n": 533,
+      "recorte": "indicador"
+    },
+    {
+      "ano": 2023,
+      "bloco": "nasc_prenatal_valido",
+      "categoria": "",
+      "n": 563,
+      "recorte": "indicador"
+    },
+    {
+      "ano": 2023,
+      "bloco": "nasc_total",
+      "categoria": "",
+      "n": 563,
+      "recorte": "indicador"
+    },
+    {
+      "ano": 2023,
+      "bloco": "obito_capitulo",
+      "categoria": "Causas externas (acidentes e violência)",
+      "n": 38,
+      "recorte": "indicador"
+    },
+    {
+      "ano": 2023,
+      "bloco": "obito_capitulo",
+      "categoria": "Doenças do aparelho digestivo",
+      "n": 26,
+      "recorte": "indicador"
+    },
+    {
+      "ano": 2023,
+      "bloco": "obito_capitulo",
+      "categoria": "Doenças do aparelho urinário e genital",
+      "n": 12,
+      "recorte": "indicador"
+    },
+    {
+      "ano": 2023,
+      "bloco": "obito_capitulo",
+      "categoria": "Doenças do coração e da circulação",
+      "n": 121,
+      "recorte": "indicador"
+    },
+    {
+      "ano": 2023,
+      "bloco": "obito_capitulo",
+      "categoria": "Doenças do sistema nervoso",
+      "n": 23,
+      "recorte": "indicador"
+    },
+    {
+      "ano": 2023,
+      "bloco": "obito_capitulo",
+      "categoria": "Doenças endócrinas e metabólicas",
+      "n": 52,
+      "recorte": "indicador"
+    },
+    {
+      "ano": 2023,
+      "bloco": "obito_capitulo",
+      "categoria": "Doenças infecciosas e parasitárias",
+      "n": 24,
+      "recorte": "indicador"
+    },
+    {
+      "ano": 2023,
+      "bloco": "obito_capitulo",
+      "categoria": "Doenças respiratórias",
+      "n": 42,
+      "recorte": "indicador"
+    },
+    {
+      "ano": 2023,
+      "bloco": "obito_capitulo",
+      "categoria": "Sintomas e sinais não classificados",
+      "n": 24,
+      "recorte": "indicador"
+    },
+    {
+      "ano": 2023,
+      "bloco": "obito_capitulo",
+      "categoria": "Transtornos mentais e comportamentais",
+      "n": 5,
+      "recorte": "indicador"
+    },
+    {
+      "ano": 2023,
+      "bloco": "obito_capitulo",
+      "categoria": "Tumores (neoplasias)",
+      "n": 63,
+      "recorte": "indicador"
+    },
+    {
+      "ano": 2023,
+      "bloco": "obito_externa",
+      "categoria": "Acidentes de transporte",
+      "n": 12,
+      "recorte": "indicador"
+    },
+    {
+      "ano": 2023,
+      "bloco": "obito_externa",
+      "categoria": "Suicídios",
+      "n": 5,
+      "recorte": "indicador"
+    },
+    {
+      "ano": 2023,
+      "bloco": "obito_faixa",
+      "categoria": "15 a 29 anos",
+      "n": 19,
+      "recorte": "indicador"
+    },
+    {
+      "ano": 2023,
+      "bloco": "obito_faixa",
+      "categoria": "30 a 59 anos",
+      "n": 98,
+      "recorte": "indicador"
+    },
+    {
+      "ano": 2023,
+      "bloco": "obito_faixa",
+      "categoria": "60 a 79 anos",
+      "n": 173,
+      "recorte": "indicador"
+    },
+    {
+      "ano": 2023,
+      "bloco": "obito_faixa",
+      "categoria": "80 anos ou mais",
+      "n": 143,
+      "recorte": "indicador"
+    },
+    {
+      "ano": 2023,
+      "bloco": "obito_faixa",
+      "categoria": "Menos de 1 ano",
+      "n": 8,
+      "recorte": "indicador"
+    },
+    {
+      "ano": 2023,
+      "bloco": "obito_infantil",
+      "categoria": "",
+      "n": 8,
+      "recorte": "indicador"
+    },
+    {
+      "ano": 2023,
+      "bloco": "obito_total",
+      "categoria": "",
+      "n": 445,
+      "recorte": "indicador"
+    },
+    {
+      "ano": 2024,
+      "bloco": "nasc_baixo_peso",
+      "categoria": "",
+      "n": 40,
+      "recorte": "indicador"
+    },
+    {
+      "ano": 2024,
+      "bloco": "nasc_cesarea",
+      "categoria": "",
+      "n": 387,
+      "recorte": "indicador"
+    },
+    {
+      "ano": 2024,
+      "bloco": "nasc_gestacao_valida",
+      "categoria": "",
+      "n": 549,
+      "recorte": "indicador"
+    },
+    {
+      "ano": 2024,
+      "bloco": "nasc_idade_mae_valida",
+      "categoria": "",
+      "n": 551,
+      "recorte": "indicador"
+    },
+    {
+      "ano": 2024,
+      "bloco": "nasc_mae_ate19",
+      "categoria": "",
+      "n": 58,
+      "recorte": "indicador"
+    },
+    {
+      "ano": 2024,
+      "bloco": "nasc_parto_valido",
+      "categoria": "",
+      "n": 551,
+      "recorte": "indicador"
+    },
+    {
+      "ano": 2024,
+      "bloco": "nasc_peso_valido",
+      "categoria": "",
+      "n": 551,
+      "recorte": "indicador"
+    },
+    {
+      "ano": 2024,
+      "bloco": "nasc_prematuro",
+      "categoria": "",
+      "n": 51,
+      "recorte": "indicador"
+    },
+    {
+      "ano": 2024,
+      "bloco": "nasc_prenatal_7ou_mais",
+      "categoria": "",
+      "n": 512,
+      "recorte": "indicador"
+    },
+    {
+      "ano": 2024,
+      "bloco": "nasc_prenatal_valido",
+      "categoria": "",
+      "n": 550,
+      "recorte": "indicador"
+    },
+    {
+      "ano": 2024,
+      "bloco": "nasc_total",
+      "categoria": "",
+      "n": 551,
+      "recorte": "indicador"
+    },
+    {
+      "ano": 2024,
+      "bloco": "obito_capitulo",
+      "categoria": "Causas externas (acidentes e violência)",
+      "n": 37,
+      "recorte": "indicador"
+    },
+    {
+      "ano": 2024,
+      "bloco": "obito_capitulo",
+      "categoria": "Doenças do aparelho digestivo",
+      "n": 24,
+      "recorte": "indicador"
+    },
+    {
+      "ano": 2024,
+      "bloco": "obito_capitulo",
+      "categoria": "Doenças do aparelho urinário e genital",
+      "n": 12,
+      "recorte": "indicador"
+    },
+    {
+      "ano": 2024,
+      "bloco": "obito_capitulo",
+      "categoria": "Doenças do coração e da circulação",
+      "n": 118,
+      "recorte": "indicador"
+    },
+    {
+      "ano": 2024,
+      "bloco": "obito_capitulo",
+      "categoria": "Doenças do sistema nervoso",
+      "n": 32,
+      "recorte": "indicador"
+    },
+    {
+      "ano": 2024,
+      "bloco": "obito_capitulo",
+      "categoria": "Doenças endócrinas e metabólicas",
+      "n": 61,
+      "recorte": "indicador"
+    },
+    {
+      "ano": 2024,
+      "bloco": "obito_capitulo",
+      "categoria": "Doenças infecciosas e parasitárias",
+      "n": 23,
+      "recorte": "indicador"
+    },
+    {
+      "ano": 2024,
+      "bloco": "obito_capitulo",
+      "categoria": "Doenças respiratórias",
+      "n": 68,
+      "recorte": "indicador"
+    },
+    {
+      "ano": 2024,
+      "bloco": "obito_capitulo",
+      "categoria": "Sintomas e sinais não classificados",
+      "n": 17,
+      "recorte": "indicador"
+    },
+    {
+      "ano": 2024,
+      "bloco": "obito_capitulo",
+      "categoria": "Transtornos mentais e comportamentais",
+      "n": 15,
+      "recorte": "indicador"
+    },
+    {
+      "ano": 2024,
+      "bloco": "obito_capitulo",
+      "categoria": "Tumores (neoplasias)",
+      "n": 81,
+      "recorte": "indicador"
+    },
+    {
+      "ano": 2024,
+      "bloco": "obito_externa",
+      "categoria": "Acidentes de transporte",
+      "n": 11,
+      "recorte": "indicador"
+    },
+    {
+      "ano": 2024,
+      "bloco": "obito_externa",
+      "categoria": "Homicídios",
+      "n": 8,
+      "recorte": "indicador"
+    },
+    {
+      "ano": 2024,
+      "bloco": "obito_externa",
+      "categoria": "Suicídios",
+      "n": 5,
+      "recorte": "indicador"
+    },
+    {
+      "ano": 2024,
+      "bloco": "obito_faixa",
+      "categoria": "15 a 29 anos",
+      "n": 16,
+      "recorte": "indicador"
+    },
+    {
+      "ano": 2024,
+      "bloco": "obito_faixa",
+      "categoria": "30 a 59 anos",
+      "n": 113,
+      "recorte": "indicador"
+    },
+    {
+      "ano": 2024,
+      "bloco": "obito_faixa",
+      "categoria": "60 a 79 anos",
+      "n": 187,
+      "recorte": "indicador"
+    },
+    {
+      "ano": 2024,
+      "bloco": "obito_faixa",
+      "categoria": "80 anos ou mais",
+      "n": 176,
+      "recorte": "indicador"
+    },
+    {
+      "ano": 2024,
+      "bloco": "obito_total",
+      "categoria": "",
+      "n": 500,
+      "recorte": "indicador"
+    }
+  ],
+  "fonte": {
+    "acesso_em": "2026-10-20",
+    "licenca": "Dados abertos do Ministério da Saúde (DATASUS); citar a fonte",
+    "nome": "SIM e SINASC — DATASUS, Ministério da Saúde",
+    "url": "https://datasus.saude.gov.br/"
+  },
+  "painel": "saude_panorama",
+  "qualidade": {
+    "flag": "real",
+    "n_registros": 91,
+    "notas": [
+      "Óbitos e nascidos vivos de moradores de Porto Feliz, pelo local de residência da mãe ou do falecido, mesmo que o fato tenha ocorrido em outra cidade.",
+      "O ano mais recente (2024) pode ser revisado pelo Ministério da Saúde; os anteriores são mais estáveis.",
+      "Óbitos fetais (natimortos) ficam fora. A causa é a causa básica da declaração de óbito, agrupada em capítulos do CID-10.",
+      "Contagens com menos de 5 ocorrências são omitidas, exceto os totais.",
+      "A taxa de mortalidade infantil usa poucos casos por ano: varia de um ano para outro sem que isso signifique melhora ou piora real.",
+      "SHA-256 do recorte de coleta: 21f2f9279d1ae0cca5565ee5fe4794d2da2d06d651f18238be8090e140c0d462"
+    ]
+  },
+  "referencia": {
+    "fim": "2024-12-31",
+    "granularidade": "anual",
+    "inicio": "2022-01-01"
+  },
+  "schema_version": "1.0"
+}

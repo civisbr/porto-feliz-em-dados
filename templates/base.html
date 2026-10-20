@@ -1,0 +1,79 @@
+{%- from "_macros.html" import icone, logo -%}
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; style-src-attr 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; base-uri 'none'; form-action 'none'">
+<title>{% block titulo %}Porto Feliz em Dados | Uma iniciativa CivisBR{% endblock %}</title>
+<meta name="description" content="{% block descricao %}Informações públicas sobre Porto Feliz organizadas de forma clara: emprego, saúde, segurança, escolas, trânsito, clima e mais.{% endblock %}">
+<meta name="theme-color" content="#f8fafd">
+<link rel="icon" href="{{ raiz }}favicon.svg" type="image/svg+xml">
+<link rel="icon" href="{{ raiz }}favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="{{ raiz }}apple-touch-icon.png">
+<link rel="preload" href="{{ raiz }}fonts/orbitron-subset.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="{{ raiz }}style.css">
+</head>
+<body>
+<header class="cabecalho">
+  <a href="#conteudo" class="pular">Pular para o conteúdo</a>
+  <div class="contido cab-barra">
+    <a class="marca" href="{{ raiz or './' }}" aria-label="Porto Feliz em Dados, página inicial">{{ logo(raiz) }}<span class="marca-texto" aria-hidden="true"><b>Porto Feliz</b><b class="marca-verde">em dados</b></span></a>
+    <nav aria-label="Principal" class="nav-desktop">
+      <ul>
+        {% for g in grupos %}
+        {% if g.paineis | length == 1 %}{% set p = g.paineis[0] %}
+        <li><a class="nav-link" href="{{ raiz }}{{ p.id }}/"{% if ativo == p.id %} aria-current="page"{% endif %}>{{ g.nome }}</a></li>
+        {% else %}
+        <li class="nav-grupo">
+          <details{% if ativo in g.paineis | map(attribute="id") %} class="tem-ativo"{% endif %}>
+            <summary>{{ g.nome }}{% if ativo in g.paineis | map(attribute="id") %}<span class="so-leitor"> (grupo da página atual)</span>{% endif %}{{ icone("seta-baixo", "ico-seta") }}</summary>
+            <ul>{% for p in g.paineis %}<li><a href="{{ raiz }}{{ p.id }}/"{% if ativo == p.id %} aria-current="page"{% endif %}>{{ p.nav }}</a></li>{% endfor %}</ul>
+          </details>
+        </li>
+        {% endif %}
+        {% endfor %}
+        <li><a class="nav-link" href="{{ raiz }}sobre/"{% if ativo == "sobre" %} aria-current="page"{% endif %}>Sobre o projeto</a></li>
+      </ul>
+    </nav>
+    <details class="menu-movel">
+      <summary aria-label="Menu">{{ icone("menu") }}</summary>
+      <nav aria-label="Principal (celular)">
+        {% for g in grupos %}
+        <p class="menu-grupo" id="mg-{{ loop.index }}">{{ g.nome }}</p>
+        <ul aria-labelledby="mg-{{ loop.index }}">{% for p in g.paineis %}<li><a href="{{ raiz }}{{ p.id }}/"{% if ativo == p.id %} aria-current="page"{% endif %}>{{ p.nav }}</a></li>{% endfor %}</ul>
+        {% endfor %}
+        <p class="menu-grupo">Projeto</p>
+        <ul><li><a href="{{ raiz }}sobre/"{% if ativo == "sobre" %} aria-current="page"{% endif %}>Sobre o projeto</a></li></ul>
+      </nav>
+    </details>
+  </div>
+</header>
+<main id="conteudo">
+{% block conteudo %}{% endblock %}
+</main>
+<footer class="rodape">
+  <div class="contido rodape-grade">
+    <div>
+      <p class="rodape-marca">{{ logo(raiz) }}<span class="marca-texto"><b>Porto Feliz</b><b class="marca-verde">em dados</b></span></p>
+      <p class="suave">Uma iniciativa CivisBR</p>
+      <p class="rodape-aviso">Os dados apresentados podem ter limitações de cobertura e de atualização. Cada painel informa fonte, data de referência e limitações conhecidas.</p>
+    </div>
+    <div>
+      <h2>Painéis</h2>
+      {% for g in grupos %}<p class="rodape-grupo" id="rg-{{ loop.index }}">{{ g.nome }}</p>
+      <ul aria-labelledby="rg-{{ loop.index }}">{% for p in g.paineis %}<li><a href="{{ raiz }}{{ p.id }}/">{{ p.nav }}</a></li>{% endfor %}</ul>{% endfor %}
+    </div>
+    <div>
+      <h2>Projeto</h2>
+      <ul>
+        <li><a href="{{ raiz }}sobre/">Sobre o projeto</a></li>
+        <li class="suave pequeno"><a href="{{ repo_url }}">Código-fonte</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<script src="{{ raiz }}app.js" defer></script>
+{% block scripts %}{% endblock %}
+</body>
+</html>

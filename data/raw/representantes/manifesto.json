@@ -1,0 +1,45 @@
+{
+  "arquivos": {
+    "alesp_deputados.json": {
+      "coletado_em": "2026-10-20",
+      "sha256": "2972680748de8d700ab534b355d9a727e791622a5eff5247bd6dfa1332e0203b",
+      "url": "https://www.al.sp.gov.br/repositorioDados/deputados/deputados.xml"
+    },
+    "camara_deputados_sp.json": {
+      "coletado_em": "2026-10-20",
+      "sha256": "8183c5eeb26647a3427cdfaefe68f1f0536d067b22fdf79c3d181ccf9767380f",
+      "url": "https://dadosabertos.camara.leg.br/api/v2/deputados?siglaUf=SP&itens=100"
+    },
+    "eleitos_municipais_2024.csv": {
+      "coletado_em": "2026-10-20",
+      "sha256": "7672969de0074c773282870f57e589eb8705674f5a0feab8e5b0929cd944ca2b",
+      "sha256_zip": "ec6cd2cc9c2b33a8e17ed2851eb5b9d3f1f68c617a9b0450fa88504200a83462",
+      "url": "https://cdn.tse.jus.br/estatistica/sead/odsele/consulta_cand/consulta_cand_2024.zip"
+    },
+    "totais_votos_2022.csv": {
+      "coletado_em": "2026-10-20",
+      "sha256": "e794a4d1c7350742ddf49152885073bedd679da645b973119cf73da7919b8fd5",
+      "sha256_zip": "1ac1e4eba54ee91f36a5f320974f2ae45b5f9fda7520e7cff163e060376ac03f",
+      "url": "https://cdn.tse.jus.br/estatistica/sead/odsele/votacao_candidato_munzona/votacao_candidato_munzona_2022.zip"
+    },
+    "totais_votos_2026.csv": {
+      "coletado_em": "2026-10-20",
+      "sha256": "dc87f3c6197abe1286e944cf06f4135a4b7a3596ba69298bed2d0b5b0ac91672",
+      "sha256_zip": "ec07dca2218d36f522bd2081177b0b2b33380e48de73d483216130dbc80677a5",
+      "url": "https://cdn.tse.jus.br/estatistica/sead/odsele/votacao_candidato_munzona/votacao_candidato_munzona_2026.zip"
+    },
+    "votos_deputados_2022.csv": {
+      "coletado_em": "2026-10-20",
+      "sha256": "86181cc2009229aa629553e92c01dca46e10cc31ebed58dca18972c28a027cde",
+      "sha256_zip": "1ac1e4eba54ee91f36a5f320974f2ae45b5f9fda7520e7cff163e060376ac03f",
+      "url": "https://cdn.tse.jus.br/estatistica/sead/odsele/votacao_candidato_munzona/votacao_candidato_munzona_2022.zip"
+    },
+    "votos_deputados_2026.csv": {
+      "coletado_em": "2026-10-20",
+      "sha256": "938b4a06a674a33f609841e338f65749299d3b6bef4e01d37d3090a819edde1c",
+      "sha256_zip": "ec07dca2218d36f522bd2081177b0b2b33380e48de73d483216130dbc80677a5",
+      "url": "https://cdn.tse.jus.br/estatistica/sead/odsele/votacao_candidato_munzona/votacao_candidato_munzona_2026.zip"
+    }
+  },
+  "verificado_em": "2026-10-20"
+}

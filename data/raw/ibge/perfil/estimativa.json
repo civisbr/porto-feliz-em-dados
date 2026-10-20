@@ -1,0 +1,27 @@
+[
+ {
+  "id": "9324",
+  "resultados": [
+   {
+    "classificacoes": [],
+    "series": [
+     {
+      "localidade": {
+       "id": "3540606",
+       "nivel": {
+        "id": "N6",
+        "nome": "Município"
+       },
+       "nome": "Porto Feliz (SP)"
+      },
+      "serie": {
+       "2026": "58837"
+      }
+     }
+    ]
+   }
+  ],
+  "unidade": "Pessoas",
+  "variavel": "População residente estimada"
+ }
+]

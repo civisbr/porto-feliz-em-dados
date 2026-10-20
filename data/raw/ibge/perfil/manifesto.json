@@ -1,0 +1,25 @@
+{
+  "acesso_em": "2026-10-20",
+  "arquivos": {
+    "censo_2022": {
+      "sha256": "240f6dea73a5dd586b58717676ef423421a8c28afa45ee4f10d6d37a1dd4525b",
+      "url": "https://servicodados.ibge.gov.br/api/v3/agregados/4714/periodos/2022/variaveis/93|614|6318?localidades=N6[3540606]"
+    },
+    "estimativa": {
+      "sha256": "b15050c4e26d24ecc243aeb775c51f84f76de96e5c11703457943fa9345c2525",
+      "url": "https://servicodados.ibge.gov.br/api/v3/agregados/6579/periodos/-1/variaveis/9324?localidades=N6[3540606]"
+    },
+    "localidade": {
+      "sha256": "df65084bd543c13a7280c61fbdbe35ec0dd709f988c5a9ad7ed60d47d89488aa",
+      "url": "https://servicodados.ibge.gov.br/api/v1/localidades/municipios/3540606"
+    },
+    "pib": {
+      "sha256": "f85bbd759aff0d278c353c4c8c49012b3c719cf1e72c02c43f8e134686869677",
+      "url": "https://servicodados.ibge.gov.br/api/v3/agregados/5938/periodos/-6/variaveis/37|553|552|497|530|496?localidades=N6[3540606]"
+    },
+    "vab": {
+      "sha256": "17324e0311d6f6715142b8dece95060e69467eb52d766e38a13f6383b351ef73",
+      "url": "https://servicodados.ibge.gov.br/api/v3/agregados/5938/periodos/-6/variaveis/498|513|517|6575|525?localidades=N6[3540606]"
+    }
+  }
+}

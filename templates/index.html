@@ -1,0 +1,144 @@
+{% extends "base.html" %}
+{% from "_macros.html" import icone, arte %}
+{% block conteudo %}
+<section class="hud heroi">
+  <div class="grade-fundo" aria-hidden="true"></div>
+  <div class="contido heroi-grade">
+    <div>
+      <p class="etiqueta-hud"><span class="ponto"></span> Uma iniciativa CivisBR</p>
+      <h1>Porto Feliz em dados.<br><span class="destaque">A cidade, mais compreensível.</span></h1>
+      <p class="heroi-texto">Informações públicas sobre a nossa cidade, organizadas para ajudar você a entender o que está acontecendo e tomar decisões melhores.</p>
+
+      <a href="#paineis" class="botao-hero">Ver os painéis {{ icone("seta") }}</a>
+      <div class="busca">
+        <form role="search" id="busca-form" hidden>
+          <label for="busca-q">O que você quer descobrir sobre Porto Feliz?</label>
+          <div class="busca-campo">{{ icone("busca") }}<input id="busca-q" type="search" placeholder="Ex.: vagas, IDEB, dengue" autocomplete="off"></div>
+        </form>
+        <div aria-live="polite" id="busca-resultados"></div>
+        <ul id="busca-indice" hidden>
+          {% for p in paineis %}<li><a href="{{ p.id }}/" data-palavras="{{ p.palavras | join(' ') }} {{ p.nav | lower }} {{ p.titulo | lower }}"><strong>{{ "Painel de " ~ p.nav if p.id != "cidade" else p.nav }}</strong> — {{ p.titulo }}</a></li>{% endfor %}
+        </ul>
+      </div>
+    </div>
+
+    <div class="hud-coluna">
+      <figure class="hud-quadro mapa">
+        <div class="hud-topo"><span>MAPA · MUNICÍPIO DE PORTO FELIZ</span><span aria-hidden="true">N ↑</span></div>
+        <div class="mapa-corpo">
+          <svg viewBox="0 0 {{ mapa.largura }} {{ mapa.altura }}" role="img" aria-labelledby="mapa-t mapa-d">
+            <title id="mapa-t">Contorno do município de Porto Feliz</title>
+            <desc id="mapa-d">Mapa de orientação com o limite municipal. Nenhum dado está marcado no mapa.</desc>
+            <defs><pattern id="hg" width="25" height="25" patternUnits="userSpaceOnUse"><path d="M25 0H0V25" fill="none" stroke="var(--hud-grid)" stroke-width="1"/></pattern></defs>
+            <rect width="{{ mapa.largura }}" height="{{ mapa.altura }}" fill="url(#hg)"/>
+            <path d="{{ mapa.caminho }}" fill="var(--hud-line)" fill-opacity=".1" stroke="var(--hud-line)" stroke-width="2" stroke-linejoin="round"/>
+            <path d="{{ mapa.caminho }}" fill="none" stroke="var(--hud-line)" stroke-opacity=".3" stroke-width="8" stroke-linejoin="round"/>
+            <g stroke="var(--amber)" stroke-width="1.5">
+              <line x1="{{ mapa.centro_x - 40 }}" x2="{{ mapa.centro_x - 10 }}" y1="{{ mapa.centro_y }}" y2="{{ mapa.centro_y }}"/>
+              <line x1="{{ mapa.centro_x + 10 }}" x2="{{ mapa.centro_x + 40 }}" y1="{{ mapa.centro_y }}" y2="{{ mapa.centro_y }}"/>
+              <line x1="{{ mapa.centro_x }}" x2="{{ mapa.centro_x }}" y1="{{ mapa.centro_y - 40 }}" y2="{{ mapa.centro_y - 10 }}"/>
+              <line x1="{{ mapa.centro_x }}" x2="{{ mapa.centro_x }}" y1="{{ mapa.centro_y + 10 }}" y2="{{ mapa.centro_y + 40 }}"/>
+              <circle cx="{{ mapa.centro_x }}" cy="{{ mapa.centro_y }}" r="18" fill="none" stroke-dasharray="3 4"/>
+            </g>
+            <circle cx="{{ mapa.centro_x }}" cy="{{ mapa.centro_y }}" r="4" fill="var(--amber)"/>
+          </svg>
+          <div class="varredura" aria-hidden="true"></div>
+        </div>
+        <figcaption class="hud-pe"><span>LAT {{ mapa.lat }} · LON {{ mapa.lon }}</span><span>Limite: IBGE, malha municipal</span></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section aria-labelledby="paineis" class="contido bloco">
+  <h2 id="paineis" class="h2-grande">Escolha um painel</h2>
+  {% for g in grupos %}
+  <h3 class="grupo-titulo" id="gc-{{ loop.index }}">{{ g.nome }}</h3>
+  <ul class="cartoes" aria-labelledby="gc-{{ loop.index }}">
+    {% for p in g.paineis %}
+    <li>
+      <a href="{{ p.id }}/" class="cartao quadro tom-{{ p.tom }}">
+        <span class="cartao-topo"><span>{{ p.nav }}</span><span class="cartao-status-{{ p.status }}"><span aria-hidden="true">● </span>{{ "Dado real" if p.status == "real" else "Pendente" }}</span></span>
+        {% if p.id == "emprego" %}
+        <span class="saldo cartao-numero {{ 'pos' if emprego.ultimo.saldo > 0 else ('neg' if emprego.ultimo.saldo < 0 else '') }}">{{ emprego.ultimo.saldo | sinal }}</span>
+        <span class="cartao-ctx">de saldo de empregos formais em {{ emprego.ultimo_mes }}</span>
+        {% elif p.id == "cidade" %}
+        <span class="cartao-numero">{{ cid.ind.populacao_estimada.valor | inteiro_br }}</span>
+        <span class="cartao-ctx">habitantes, estimativa do IBGE para {{ cid.ind.populacao_estimada.ano }}</span>
+        {% elif p.id == "transito" %}
+        {% if trans.ac_ult12 is not none %}<span class="cartao-numero">{{ trans.ac_ult12 | num }}</span>
+        <span class="cartao-ctx">sinistros de trânsito com vítima nos 12 meses até {{ trans.ac_fim }}</span>
+        {% else %}<span class="cartao-numero">{{ trans.inm_total }}</span>
+        <span class="cartao-ctx">medidores de velocidade na base do Inmetro</span>{% endif %}
+        {% elif p.id == "clima" %}
+        {% if clima.prev and clima.prev.inmet %}<span class="cartao-numero">{{ clima.prev.inmet[0].tmax }}° / {{ clima.prev.inmet[0].tmin }}°</span>
+        <span class="cartao-ctx">previsão do INMET para {{ clima.prev.inmet[0].dia | data_br }}: {{ clima.prev.inmet[0].resumo | lower }}</span>
+        {% else %}<span class="cartao-numero">{{ clima.anual.tmax_media | brl1 }}° / {{ clima.anual.tmin_media | brl1 }}°</span>
+        <span class="cartao-ctx">máxima e mínima médias do ano, normais 1991–2020</span>{% endif %}
+        {% elif p.id == "comparativo" %}
+        <span class="cartao-numero">{{ comp.blocos[0].ultimo.pos_sp }}º</span>
+        <span class="cartao-ctx">maior município paulista em população, entre os {{ comp.blocos[0].ultimo.n_sp }} ({{ comp.blocos[0].ultimo.ano }})</span>
+        {% elif p.id == "saude" %}
+        {% if saude.doencas %}<span class="cartao-numero">{{ saude.doencas[0].casos_8s | num }}</span>
+        <span class="cartao-ctx">casos notificados de {{ saude.doencas[0].rotulo | lower }} nas últimas 8 semanas; alerta {{ saude.doencas[0].nivel_rotulo.split(":")[0] | lower }} ({{ saude.ref_saude }})</span>
+        {% else %}<span class="cartao-numero">—</span><span class="cartao-ctx">sem dado recente de arboviroses</span>{% endif %}
+        {% elif p.id == "hospitais" %}
+        <span class="cartao-numero">{{ hosp.resumo.leitos_sus | num }}</span>
+        <span class="cartao-ctx">leitos SUS em {{ hosp.resumo.n_hospitais_sus }} hospitais; {{ hosp.resumo.internacoes | num }} internações SUS em 12 meses</span>
+        {% elif p.id == "panorama" %}
+        <span class="cartao-numero">{{ pan.nascidos | num }}</span>
+        <span class="cartao-ctx">nascidos vivos e {{ pan.obitos | num }} óbitos de moradores em {{ pan.ano_atual }}</span>
+        {% elif p.id == "vacinas" %}
+        <span class="cartao-numero">{{ vac.n_vacinas }}</span>
+        <span class="cartao-ctx">vacinas no calendário do SUS; {% if vac.ativas %}campanha: {{ vac.ativas[0].nome }}{% else %}nenhuma campanha em andamento conhecida{% endif %}</span>
+        {% elif p.id == "seguranca" %}
+        <span class="cartao-numero">{{ seg.roubos_atual | num }}</span>
+        <span class="cartao-ctx">roubos registrados nos 12 meses até {{ seg.mes_fim_curto }}</span>
+        {% elif p.id == "representantes" %}
+        <span class="cartao-numero">{{ rep.prefeito.nome | nome_br }}</span>
+        <span class="cartao-ctx">prefeito, eleito em {{ rep.prefeito.eleicao }} (mandato {{ rep.prefeito.mandato }})</span>
+        {% elif p.id == "escolas" %}
+        <span class="cartao-numero">{{ esc.escolas | length | num }}</span>
+        <span class="cartao-ctx">escolas em atividade no Censo Escolar {{ esc.ano_censo }}</span>
+        {% else %}
+        <span class="cartao-arte">{{ arte(p.id) }}<span class="pequeno suave">Ilustração, sem valores. Painel em preparação.</span></span>
+        {% endif %}
+        <span class="cartao-titulo">{{ p.titulo }}</span>
+        {% if p.etiqueta %}<span class="etiqueta-escura">{{ p.etiqueta }}</span>{% endif %}
+        <span class="cartao-desc">{{ p.descricao }}</span>
+        <span class="cartao-cta">{{ p.cta }} {{ icone("seta") }}</span>
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+  {% endfor %}
+</section>
+
+<section aria-labelledby="ajuda" class="contido bloco-largo">
+  <div class="texto-estreito">
+    <h2 id="ajuda" class="h2-grande">Como os dados ajudam você</h2>
+    <p class="lead">Três usos do dia a dia que os painéis ajudam a resolver.</p>
+  </div>
+  <ol class="perguntas">
+    {% for p, t in [("emprego", "Entender quais setores estão criando ou reduzindo empregos."), ("escolas", "Conhecer os indicadores de uma escola antes de buscar mais informações.")] %}
+    <li><span class="num">0{{ loop.index }}</span><p>{{ t }}</p><div class="arte-suave">{{ arte(p) }}</div><p class="pequeno suave">Ilustração, sem valores.</p></li>
+    {% endfor %}
+  </ol>
+</section>
+
+<section aria-labelledby="confianca" class="contido bloco-largo">
+  <div class="confianca">
+    <div>
+      {{ icone("escudo", "ico-grande") }}
+      <h2 id="confianca">Dados públicos. Fontes abertas.</h2>
+      <p>Cada informação publicada tem origem rastreável, data de referência e limitações documentadas. Se um dado ainda não existe, dizemos isso claramente.</p>
+      <a href="sobre/" class="link-claro">Conheça a metodologia {{ icone("seta") }}</a>
+    </div>
+    <ul class="confianca-itens">
+      {% for i, t, d in [("banco","Fonte primária","Órgão oficial que produz o dado."),("arquivo","Metodologia","Como o dado é tratado e calculado."),("calendario","Data de referência","A que período cada número se refere."),("medidor","Qualidade","Real, estimativa ou pendente."),("codigo","Dados e código","Arquivos e código de geração, quando publicados.")] %}
+      <li>{{ icone(i, "ico-sky") }}<p class="negrito">{{ t }}</p><p class="pequeno">{{ d }}</p></li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+{% endblock %}

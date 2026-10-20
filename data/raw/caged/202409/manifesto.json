@@ -1,0 +1,24 @@
+{
+  "acesso_em": "2026-10-20",
+  "arquivos": {
+    "EXC": {
+      "bytes_origem": 104037,
+      "linhas": 0,
+      "sha256_agregado": "53166e1602a7115b342884df5367c0adc6669530317ffd39bf8005c2fc9b317c",
+      "sha256_origem": "e25e469e299246d123be6f6e407030da8170b60d68ae958aa409298f3175d82c"
+    },
+    "FOR": {
+      "bytes_origem": 586593,
+      "linhas": 10,
+      "sha256_agregado": "bf247522f77348ba756d6996b9c43328c8c413930aa04c3c2e783d9f7a080c4e",
+      "sha256_origem": "03bd7378f46f3312e5d8cd2adc4d94b2ec8d2ce39536be46bf14d061db0cc8da"
+    },
+    "MOV": {
+      "bytes_origem": 51790288,
+      "linhas": 1491,
+      "sha256_agregado": "5c84e02f25a38b8b1b5f303d6c438aedd6125a41ec41562b1ff09d4a232d223d",
+      "sha256_origem": "f7620a6b194ea4fd7788423b8b529739632ceaee344b967784a22e5e917125c1"
+    }
+  },
+  "competencia": "202409"
+}

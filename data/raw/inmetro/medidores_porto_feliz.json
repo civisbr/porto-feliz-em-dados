@@ -1,0 +1,279 @@
+[
+ {
+  "DataUltimaVerificacao": "13/07/2022",
+  "DataValidade": "12/07/2023",
+  "Faixas": [
+   {
+    "NumeroFaixa": "2",
+    "NumeroInmetro": "1244184",
+    "NumeroSerie": "0766",
+    "Sentido": "OESTE",
+    "VelocidadeNominal": "0"
+   },
+   {
+    "NumeroFaixa": "1",
+    "NumeroInmetro": "1244183",
+    "NumeroSerie": "0766",
+    "Sentido": "OESTE",
+    "VelocidadeNominal": "0"
+   }
+  ],
+  "Historico": [
+   {
+    "Ano": "2019",
+    "DataLaudo": "21/05/2019",
+    "DataValidade": "20/05/2020",
+    "NumeroCertificado": "15765153",
+    "NumeroEnsaio": "1325",
+    "Resultado": "Aprovado",
+    "TipoServico": "Periódica"
+   },
+   {
+    "Ano": "2020",
+    "DataLaudo": "15/06/2020",
+    "DataValidade": "14/06/2021",
+    "NumeroCertificado": "15886297",
+    "NumeroEnsaio": "5104",
+    "Resultado": "Aprovado",
+    "TipoServico": "Periódica"
+   },
+   {
+    "Ano": "2016",
+    "DataLaudo": "24/11/2016",
+    "DataValidade": "23/11/2017",
+    "NumeroCertificado": "15450294",
+    "NumeroEnsaio": "6817",
+    "Resultado": "Aprovado",
+    "TipoServico": "Periódica"
+   },
+   {
+    "Ano": "2017",
+    "DataLaudo": "14/11/2017",
+    "DataValidade": "13/11/2018",
+    "NumeroCertificado": "15599914",
+    "NumeroEnsaio": "3818",
+    "Resultado": "Aprovado",
+    "TipoServico": "Periódica"
+   },
+   {
+    "Ano": "2021",
+    "DataLaudo": "20/07/2021",
+    "DataValidade": "19/07/2022",
+    "NumeroCertificado": "15981551",
+    "NumeroEnsaio": "1329",
+    "Resultado": "Aprovado",
+    "TipoServico": "Periódica"
+   },
+   {
+    "Ano": "2018",
+    "DataLaudo": "06/06/2018",
+    "DataValidade": "05/06/2019",
+    "NumeroCertificado": "15632587",
+    "NumeroEnsaio": "1351",
+    "Resultado": "Aprovado",
+    "TipoServico": "Periódica"
+   },
+   {
+    "Ano": "2022",
+    "DataLaudo": "13/07/2022",
+    "DataValidade": "12/07/2023",
+    "NumeroCertificado": "16059209",
+    "NumeroEnsaio": "1875",
+    "Resultado": "Aprovado",
+    "TipoServico": "Periódica"
+   },
+   {
+    "Ano": "2015",
+    "DataLaudo": "07/12/2015",
+    "DataValidade": "06/12/2016",
+    "NumeroCertificado": "15356057",
+    "NumeroEnsaio": "6362",
+    "Resultado": "Aprovado",
+    "TipoServico": "Após Reparo"
+   },
+   {
+    "Ano": "2015",
+    "DataLaudo": "25/08/2015",
+    "DataValidade": "24/08/2016",
+    "NumeroCertificado": "15286563",
+    "NumeroEnsaio": "4184",
+    "Resultado": "Aprovado",
+    "TipoServico": "Periódica"
+   },
+   {
+    "Ano": "2014",
+    "DataLaudo": "29/08/2014",
+    "DataValidade": "28/08/2015",
+    "NumeroCertificado": "15117790",
+    "NumeroEnsaio": "3055",
+    "Resultado": "Aprovado",
+    "TipoServico": "Periódica"
+   },
+   {
+    "Ano": "2013",
+    "DataLaudo": "26/08/2013",
+    "DataValidade": "25/08/2014",
+    "NumeroCertificado": "15080526",
+    "NumeroEnsaio": "2778",
+    "Resultado": "Aprovado",
+    "TipoServico": "Periódica"
+   },
+   {
+    "Ano": "2012",
+    "DataLaudo": "28/08/2012",
+    "DataValidade": "27/08/2013",
+    "NumeroCertificado": "14812113",
+    "NumeroEnsaio": "2662",
+    "Resultado": "Aprovado",
+    "TipoServico": "Periódica"
+   }
+  ],
+  "LocalVerificacao": "RODOVIA SP 280 KM 97 + 700M",
+  "TipoMedidor": "Fixo",
+  "UltimoResultado": "Aprovado"
+ },
+ {
+  "DataUltimaVerificacao": "14/05/2026",
+  "DataValidade": "13/05/2027",
+  "Faixas": [
+   {
+    "NumeroFaixa": "1",
+    "NumeroInmetro": "16073224",
+    "NumeroSerie": "1544",
+    "Sentido": "SUL",
+    "VelocidadeNominal": "60"
+   },
+   {
+    "NumeroFaixa": "2",
+    "NumeroInmetro": "16073224",
+    "NumeroSerie": "1544",
+    "Sentido": "NORTE",
+    "VelocidadeNominal": "60"
+   }
+  ],
+  "Historico": [
+   {
+    "Ano": "2026",
+    "DataLaudo": "14/05/2026",
+    "DataValidade": "13/05/2027",
+    "NumeroCertificado": "16430036",
+    "NumeroEnsaio": "1881",
+    "Resultado": "Aprovado",
+    "TipoServico": "Periódica"
+   }
+  ],
+  "LocalVerificacao": "SP 097 KM 010,200",
+  "TipoMedidor": "Fixo",
+  "UltimoResultado": "Aprovado"
+ },
+ {
+  "DataUltimaVerificacao": "14/05/2026",
+  "DataValidade": "13/05/2027",
+  "Faixas": [
+   {
+    "NumeroFaixa": "2",
+    "NumeroInmetro": "16073225",
+    "NumeroSerie": "1830",
+    "Sentido": "SUL",
+    "VelocidadeNominal": "80"
+   },
+   {
+    "NumeroFaixa": "1",
+    "NumeroInmetro": "16073225",
+    "NumeroSerie": "1830",
+    "Sentido": "NORTE",
+    "VelocidadeNominal": "80"
+   }
+  ],
+  "Historico": [
+   {
+    "Ano": "2026",
+    "DataLaudo": "14/05/2026",
+    "DataValidade": "13/05/2027",
+    "NumeroCertificado": "16430038",
+    "NumeroEnsaio": "1882",
+    "Resultado": "Aprovado",
+    "TipoServico": "Periódica"
+   }
+  ],
+  "LocalVerificacao": "SP 097 KM 019,400",
+  "TipoMedidor": "Fixo",
+  "UltimoResultado": "Aprovado"
+ },
+ {
+  "DataUltimaVerificacao": "21/06/2023",
+  "DataValidade": "20/06/2024",
+  "Faixas": [
+   {
+    "NumeroFaixa": "2",
+    "NumeroInmetro": "",
+    "NumeroSerie": "0952",
+    "Sentido": "OESTE",
+    "VelocidadeNominal": "120"
+   },
+   {
+    "NumeroFaixa": "1",
+    "NumeroInmetro": "",
+    "NumeroSerie": "0952",
+    "Sentido": "OESTE",
+    "VelocidadeNominal": "120"
+   }
+  ],
+  "Historico": [],
+  "LocalVerificacao": "SP 280 KM097 + 700MTS",
+  "TipoMedidor": "Fixo",
+  "UltimoResultado": "Aprovado"
+ },
+ {
+  "DataUltimaVerificacao": "09/06/2026",
+  "DataValidade": "08/06/2027",
+  "Faixas": [
+   {
+    "NumeroFaixa": "1",
+    "NumeroInmetro": "15412791",
+    "NumeroSerie": "0952",
+    "Sentido": "OESTE",
+    "VelocidadeNominal": "0"
+   },
+   {
+    "NumeroFaixa": "2",
+    "NumeroInmetro": "15412791",
+    "NumeroSerie": "0952",
+    "Sentido": "OESTE",
+    "VelocidadeNominal": "0"
+   }
+  ],
+  "Historico": [
+   {
+    "Ano": "2024",
+    "DataLaudo": "18/06/2024",
+    "DataValidade": "17/06/2025",
+    "NumeroCertificado": "16233576",
+    "NumeroEnsaio": "1664",
+    "Resultado": "Aprovado",
+    "TipoServico": "Periódica"
+   },
+   {
+    "Ano": "2025",
+    "DataLaudo": "10/06/2025",
+    "DataValidade": "09/06/2026",
+    "NumeroCertificado": "16320844",
+    "NumeroEnsaio": "2105",
+    "Resultado": "Aprovado",
+    "TipoServico": "Periódica"
+   },
+   {
+    "Ano": "2026",
+    "DataLaudo": "09/06/2026",
+    "DataValidade": "08/06/2027",
+    "NumeroCertificado": "16434105",
+    "NumeroEnsaio": "2384",
+    "Resultado": "Aprovado",
+    "TipoServico": "Periódica"
+   }
+  ],
+  "LocalVerificacao": "SP-280 KM: 097,700",
+  "TipoMedidor": "Fixo",
+  "UltimoResultado": "Aprovado"
+ }
+]

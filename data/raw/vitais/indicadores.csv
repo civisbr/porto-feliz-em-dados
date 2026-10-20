@@ -1,0 +1,92 @@
+ano;bloco;categoria;n
+2022;nasc_baixo_peso;;57
+2022;nasc_cesarea;;394
+2022;nasc_gestacao_valida;;609
+2022;nasc_idade_mae_valida;;609
+2022;nasc_mae_ate19;;47
+2022;nasc_parto_valido;;609
+2022;nasc_peso_valido;;609
+2022;nasc_prematuro;;62
+2022;nasc_prenatal_7ou_mais;;548
+2022;nasc_prenatal_valido;;608
+2022;nasc_total;;609
+2022;obito_capitulo;Causas externas (acidentes e violência);28
+2022;obito_capitulo;Doenças do aparelho digestivo;22
+2022;obito_capitulo;Doenças do aparelho urinário e genital;13
+2022;obito_capitulo;Doenças do coração e da circulação;100
+2022;obito_capitulo;Doenças do sistema nervoso;22
+2022;obito_capitulo;Doenças endócrinas e metabólicas;21
+2022;obito_capitulo;Doenças infecciosas e parasitárias;42
+2022;obito_capitulo;Doenças respiratórias;41
+2022;obito_capitulo;Sintomas e sinais não classificados;22
+2022;obito_capitulo;Transtornos mentais e comportamentais;5
+2022;obito_capitulo;Tumores (neoplasias);74
+2022;obito_externa;Acidentes de transporte;11
+2022;obito_externa;Suicídios;8
+2022;obito_faixa;1 a 14 anos;6
+2022;obito_faixa;15 a 29 anos;10
+2022;obito_faixa;30 a 59 anos;73
+2022;obito_faixa;60 a 79 anos;172
+2022;obito_faixa;80 anos ou mais;137
+2022;obito_total;;401
+2023;nasc_baixo_peso;;48
+2023;nasc_cesarea;;405
+2023;nasc_gestacao_valida;;563
+2023;nasc_idade_mae_valida;;563
+2023;nasc_mae_ate19;;46
+2023;nasc_parto_valido;;563
+2023;nasc_peso_valido;;563
+2023;nasc_prematuro;;49
+2023;nasc_prenatal_7ou_mais;;533
+2023;nasc_prenatal_valido;;563
+2023;nasc_total;;563
+2023;obito_capitulo;Causas externas (acidentes e violência);38
+2023;obito_capitulo;Doenças do aparelho digestivo;26
+2023;obito_capitulo;Doenças do aparelho urinário e genital;12
+2023;obito_capitulo;Doenças do coração e da circulação;121
+2023;obito_capitulo;Doenças do sistema nervoso;23
+2023;obito_capitulo;Doenças endócrinas e metabólicas;52
+2023;obito_capitulo;Doenças infecciosas e parasitárias;24
+2023;obito_capitulo;Doenças respiratórias;42
+2023;obito_capitulo;Sintomas e sinais não classificados;24
+2023;obito_capitulo;Transtornos mentais e comportamentais;5
+2023;obito_capitulo;Tumores (neoplasias);63
+2023;obito_externa;Acidentes de transporte;12
+2023;obito_externa;Suicídios;5
+2023;obito_faixa;15 a 29 anos;19
+2023;obito_faixa;30 a 59 anos;98
+2023;obito_faixa;60 a 79 anos;173
+2023;obito_faixa;80 anos ou mais;143
+2023;obito_faixa;Menos de 1 ano;8
+2023;obito_infantil;;8
+2023;obito_total;;445
+2024;nasc_baixo_peso;;40
+2024;nasc_cesarea;;387
+2024;nasc_gestacao_valida;;549
+2024;nasc_idade_mae_valida;;551
+2024;nasc_mae_ate19;;58
+2024;nasc_parto_valido;;551
+2024;nasc_peso_valido;;551
+2024;nasc_prematuro;;51
+2024;nasc_prenatal_7ou_mais;;512
+2024;nasc_prenatal_valido;;550
+2024;nasc_total;;551
+2024;obito_capitulo;Causas externas (acidentes e violência);37
+2024;obito_capitulo;Doenças do aparelho digestivo;24
+2024;obito_capitulo;Doenças do aparelho urinário e genital;12
+2024;obito_capitulo;Doenças do coração e da circulação;118
+2024;obito_capitulo;Doenças do sistema nervoso;32
+2024;obito_capitulo;Doenças endócrinas e metabólicas;61
+2024;obito_capitulo;Doenças infecciosas e parasitárias;23
+2024;obito_capitulo;Doenças respiratórias;68
+2024;obito_capitulo;Sintomas e sinais não classificados;17
+2024;obito_capitulo;Transtornos mentais e comportamentais;15
+2024;obito_capitulo;Tumores (neoplasias);81
+2024;obito_externa;Acidentes de transporte;11
+2024;obito_externa;Homicídios;8
+2024;obito_externa;Suicídios;5
+2024;obito_faixa;15 a 29 anos;16
+2024;obito_faixa;30 a 59 anos;113
+2024;obito_faixa;60 a 79 anos;187
+2024;obito_faixa;80 anos ou mais;176
+2024;obito_total;;500

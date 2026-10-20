@@ -1,0 +1,182 @@
+[
+ {
+  "id": "37",
+  "resultados": [
+   {
+    "classificacoes": [],
+    "series": [
+     {
+      "localidade": {
+       "id": "3540606",
+       "nivel": {
+        "id": "N6",
+        "nome": "Município"
+       },
+       "nome": "Porto Feliz (SP)"
+      },
+      "serie": {
+       "2018": "2599523",
+       "2019": "2997482",
+       "2020": "3065172",
+       "2021": "3754666",
+       "2022": "4346577",
+       "2023": "5067049"
+      }
+     }
+    ]
+   }
+  ],
+  "unidade": "Mil Reais",
+  "variavel": "Produto Interno Bruto a preços correntes"
+ },
+ {
+  "id": "553",
+  "resultados": [
+   {
+    "classificacoes": [],
+    "series": [
+     {
+      "localidade": {
+       "id": "3540606",
+       "nivel": {
+        "id": "N6",
+        "nome": "Município"
+       },
+       "nome": "Porto Feliz (SP)"
+      },
+      "serie": {
+       "2018": "3.50",
+       "2019": "3.73",
+       "2020": "3.80",
+       "2021": "3.83",
+       "2022": "3.83",
+       "2023": "4.08"
+      }
+     }
+    ]
+   }
+  ],
+  "unidade": "%",
+  "variavel": "Participação do produto interno bruto a preços correntes no produto interno bruto a preços correntes da microrregião geográfica"
+ },
+ {
+  "id": "552",
+  "resultados": [
+   {
+    "classificacoes": [],
+    "series": [
+     {
+      "localidade": {
+       "id": "3540606",
+       "nivel": {
+        "id": "N6",
+        "nome": "Município"
+       },
+       "nome": "Porto Feliz (SP)"
+      },
+      "serie": {
+       "2018": "1.53",
+       "2019": "1.61",
+       "2020": "1.55",
+       "2021": "1.65",
+       "2022": "1.70",
+       "2023": "1.85"
+      }
+     }
+    ]
+   }
+  ],
+  "unidade": "%",
+  "variavel": "Participação do produto interno bruto a preços correntes no produto interno bruto a preços correntes da mesorregião geográfica"
+ },
+ {
+  "id": "497",
+  "resultados": [
+   {
+    "classificacoes": [],
+    "series": [
+     {
+      "localidade": {
+       "id": "3540606",
+       "nivel": {
+        "id": "N6",
+        "nome": "Município"
+       },
+       "nome": "Porto Feliz (SP)"
+      },
+      "serie": {
+       "2018": "0.12",
+       "2019": "0.13",
+       "2020": "0.13",
+       "2021": "0.14",
+       "2022": "0.14",
+       "2023": "0.15"
+      }
+     }
+    ]
+   }
+  ],
+  "unidade": "%",
+  "variavel": "Participação do produto interno bruto a preços correntes no produto interno bruto a preços correntes da unidade da federação"
+ },
+ {
+  "id": "530",
+  "resultados": [
+   {
+    "classificacoes": [],
+    "series": [
+     {
+      "localidade": {
+       "id": "3540606",
+       "nivel": {
+        "id": "N6",
+        "nome": "Município"
+       },
+       "nome": "Porto Feliz (SP)"
+      },
+      "serie": {
+       "2018": "0.07",
+       "2019": "0.08",
+       "2020": "0.08",
+       "2021": "0.08",
+       "2022": "0.08",
+       "2023": "0.09"
+      }
+     }
+    ]
+   }
+  ],
+  "unidade": "%",
+  "variavel": "Participação do produto interno bruto a preços correntes no produto interno bruto a preços correntes da grande região"
+ },
+ {
+  "id": "496",
+  "resultados": [
+   {
+    "classificacoes": [],
+    "series": [
+     {
+      "localidade": {
+       "id": "3540606",
+       "nivel": {
+        "id": "N6",
+        "nome": "Município"
+       },
+       "nome": "Porto Feliz (SP)"
+      },
+      "serie": {
+       "2018": "0.04",
+       "2019": "0.04",
+       "2020": "0.04",
+       "2021": "0.04",
+       "2022": "0.04",
+       "2023": "0.05"
+      }
+     }
+    ]
+   }
+  ],
+  "unidade": "%",
+  "variavel": "Participação do produto interno bruto a preços correntes no produto interno bruto a preços correntes do Brasil"
+ }
+]

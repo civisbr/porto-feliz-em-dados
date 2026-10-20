@@ -1,0 +1,69 @@
+{
+  "competencias": {
+    "202509": {
+      "bytes": 19869754,
+      "coletado_em": "2026-10-20",
+      "sha256": "6b6af50e25a2ccbfc570bb3491412c8722cb7b05190d40a01c3f58452373d759"
+    },
+    "202510": {
+      "bytes": 20618895,
+      "coletado_em": "2026-10-20",
+      "sha256": "6539aa457e88c549d90e64f04b3186c60a588aebc9a7ee6d62db1d0cced96fb1"
+    },
+    "202511": {
+      "bytes": 19009164,
+      "coletado_em": "2026-10-20",
+      "sha256": "0523ccdd9909188de7c1175089c09d865bce5961f07d2b1b1d61b7ca139882d4"
+    },
+    "202512": {
+      "bytes": 18233568,
+      "coletado_em": "2026-10-20",
+      "sha256": "3aef9b36891e926b46e178738e661641d383fc9f0c6ad890ee25ef3764d41a60"
+    },
+    "202601": {
+      "bytes": 18874408,
+      "coletado_em": "2026-10-20",
+      "sha256": "1c528b3e9078d59486746306eb54a0fa6943d2419b2b41a8a464b0d18a3a9a13"
+    },
+    "202602": {
+      "bytes": 18245226,
+      "coletado_em": "2026-10-20",
+      "sha256": "a8036f8be75ebf9fc7e00cdf82e6e480a95d234421f1e6a398265b0c4415e240"
+    },
+    "202603": {
+      "bytes": 20380055,
+      "coletado_em": "2026-10-20",
+      "sha256": "c89cb575764a338b519956006682cae477f1762cff0bfc619bd6b26f67749454"
+    },
+    "202604": {
+      "bytes": 19989542,
+      "coletado_em": "2026-10-20",
+      "sha256": "645f52092807529cd0cf604928323318fc251f22cf18e0c60db95baf756e8b61"
+    },
+    "202605": {
+      "bytes": 20210088,
+      "coletado_em": "2026-10-20",
+      "sha256": "89caaae5775420aecdce4f0e2e6ad881f90d44dc25591fd2c84975ffda52282f"
+    },
+    "202606": {
+      "bytes": 19807514,
+      "coletado_em": "2026-10-20",
+      "sha256": "d2f362c7e1bc4aa5a0800424f0e665eb1a16aadad491f8cc05a7afbddb5075a9"
+    },
+    "202607": {
+      "bytes": 20051789,
+      "coletado_em": "2026-10-20",
+      "sha256": "12e6fcd7ef4bda02c3bb139944b28c6e93a61241fc15ebe7049200813dc29828"
+    },
+    "202608": {
+      "bytes": 20522295,
+      "coletado_em": "2026-10-20",
+      "sha256": "1f35ec2ba4546e01043b59f03c7af695fbdd7c8965feb5a498b03f228afab64a"
+    }
+  },
+  "fonte": "SIH/SUS (AIH reduzida, RD) de SP, DATASUS; recorte: hospital em Porto Feliz",
+  "primeira": "202509",
+  "sha256_csv": "f7b1384c4088e9638c8848b8ecc52c6b60aa1ae7aa98049cf52a1654c782ae58",
+  "ultima": "202608",
+  "verificado_em": "2026-10-20"
+}
