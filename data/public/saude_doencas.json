@@ -2905,7 +2905,7 @@
       "casos": 8,
       "casos_est": 8.0,
       "data_inicio": "2026-09-13",
-      "est_max": 9.0,
+      "est_max": 8.0,
       "est_min": 8.0,
       "grupo": "dengue",
       "inc100k": 13.48936,
@@ -2932,40 +2932,55 @@
     },
     {
       "ano": 2026,
-      "casos": 8,
-      "casos_est": 8.0,
+      "casos": 10,
+      "casos_est": 10.0,
       "data_inicio": "2026-09-27",
       "est_max": 11.0,
-      "est_min": 8.0,
+      "est_min": 10.0,
       "grupo": "dengue",
-      "inc100k": 13.48936,
+      "inc100k": 16.8617,
       "nivel": 1,
       "recorte": "semanal",
-      "rt": 0.9705741,
+      "rt": 1.1975293,
       "se": 202639,
       "semana": 39
     },
     {
       "ano": 2026,
       "casos": 8,
-      "casos_est": 12.5,
+      "casos_est": 8.0,
       "data_inicio": "2026-10-04",
-      "est_max": 19.0,
-      "est_min": 9.0,
+      "est_max": 11.0,
+      "est_min": 8.0,
       "grupo": "dengue",
-      "inc100k": 21.077126,
+      "inc100k": 13.48936,
       "nivel": 1,
       "recorte": "semanal",
-      "rt": 1.401541,
+      "rt": 0.8733876,
       "se": 202640,
       "semana": 40
+    },
+    {
+      "ano": 2026,
+      "casos": 5,
+      "casos_est": 9.0,
+      "data_inicio": "2026-10-11",
+      "est_max": 15.0,
+      "est_min": 5.0,
+      "grupo": "dengue",
+      "inc100k": 15.17553,
+      "nivel": 1,
+      "recorte": "semanal",
+      "rt": 0.9686702,
+      "se": 202641,
+      "semana": 41
     },
     {
       "categoria": "atual",
       "grupo": "dengue",
       "n": 16,
       "recorte": "situacao",
-      "se": 202640
+      "se": 202641
     },
     {
       "ano": 2023,
@@ -5923,11 +5938,26 @@
       "semana": 40
     },
     {
+      "ano": 2026,
+      "casos": 1,
+      "casos_est": 1.0,
+      "data_inicio": "2026-10-11",
+      "est_max": 1.0,
+      "est_min": 1.0,
+      "grupo": "chikungunya",
+      "inc100k": 1.68617,
+      "nivel": 1,
+      "recorte": "semanal",
+      "rt": 18.521618,
+      "se": 202641,
+      "semana": 41
+    },
+    {
       "categoria": "atual",
       "grupo": "chikungunya",
       "n": 16,
       "recorte": "situacao",
-      "se": 202640
+      "se": 202641
     },
     {
       "ano": 2023,
@@ -6817,13 +6847,13 @@
     {
       "categoria": "desatualizado",
       "grupo": "zika",
-      "n": 982,
+      "n": 989,
       "recorte": "situacao",
       "se": 202407
     }
   ],
   "fonte": {
-    "acesso_em": "2026-10-20",
+    "acesso_em": "2026-10-27",
     "licenca": "Dados públicos do InfoDengue (Fiocruz/FGV); citar a fonte. Termos em https://info.dengue.mat.br/ (não verificados em texto)",
     "nome": "InfoDengue (Fiocruz/FGV) — alertas municipais de arboviroses",
     "url": "https://info.dengue.mat.br/"
@@ -6831,18 +6861,18 @@
   "painel": "saude_doencas",
   "qualidade": {
     "flag": "estimativa",
-    "n_registros": 456,
+    "n_registros": 458,
     "notas": [
       "Casos notificados são suspeitas registradas no sistema de vigilância; não são casos confirmados.",
       "As últimas semanas costumam subir depois, porque as notificações chegam com atraso. O InfoDengue estima o número final (casos estimados, com intervalo).",
       "O nível de alerta (verde, amarelo, laranja, vermelho) é calculado pelo modelo do InfoDengue com casos, clima e transmissão; não é um aviso oficial da Prefeitura.",
       "O campo de notificações acumuladas do ano da API não é usado: não bate com a soma das semanas.",
       "Sem semanas nos últimos 56 dias, aparece como sem dado recente: zika.",
-      "SHA-256 do manifesto de coleta: 3ce007f2a6379f715e5cef11c08bcdbecb95b908a16c81fe7feb0e664c83ca0d"
+      "SHA-256 do manifesto de coleta: 6b24fea5f1140bf9205a279e8962e22046fad920c1acfb631a15f8b0065f5731"
     ]
   },
   "referencia": {
-    "fim": "2026-10-10",
+    "fim": "2026-10-17",
     "granularidade": "semanal",
     "inicio": "2023-01-01"
   },
