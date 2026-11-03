@@ -1,23 +1,23 @@
 {
   "doencas": {
     "chikungunya": {
-      "coletado_em": "2026-10-27",
-      "n_semanas": 198,
+      "coletado_em": "2026-11-03",
+      "n_semanas": 199,
       "primeira_se": 202301,
-      "sha256_csv": "07256e77281100ef1712649b50e28f837de1b033daf13466db658629cb1a1abb",
-      "ultima_se": 202641,
-      "versao_modelo": "2026-10-23"
+      "sha256_csv": "821ad383f17bfaf0c65be9b5ae01ebf31868a5e50ae5aebe0b09ed7766217b98",
+      "ultima_se": 202642,
+      "versao_modelo": "2026-10-27"
     },
     "dengue": {
-      "coletado_em": "2026-10-27",
-      "n_semanas": 198,
+      "coletado_em": "2026-11-03",
+      "n_semanas": 199,
       "primeira_se": 202301,
-      "sha256_csv": "3f7bd74f61cd5f13925186ad9554d46ce81ec310f67691b72f78636552fddf62",
-      "ultima_se": 202641,
-      "versao_modelo": "2026-10-23"
+      "sha256_csv": "d9fbbcafff26d3e52aa9175626025fb4397862e0611e837a7626ca918c93dec8",
+      "ultima_se": 202642,
+      "versao_modelo": "2026-10-27"
     },
     "zika": {
-      "coletado_em": "2026-10-27",
+      "coletado_em": "2026-11-03",
       "n_semanas": 59,
       "primeira_se": 202301,
       "sha256_csv": "8b73603ed3f4ff29dc986a421765288ff00e983f56c6eecf729520f92c6fa620",
@@ -26,5 +26,5 @@
     }
   },
   "fonte": "InfoDengue (Fiocruz/FGV), alertcity, geocódigo IBGE 3540606",
-  "verificado_em": "2026-10-27"
+  "verificado_em": "2026-11-03"
 }
