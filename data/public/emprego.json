@@ -6,15 +6,6 @@
   },
   "dados": [
     {
-      "admissoes": 845,
-      "competencia": "202409",
-      "desligamentos": 655,
-      "recorte": "mensal",
-      "saldo": 190,
-      "secao": null,
-      "secao_nome": null
-    },
-    {
       "admissoes": 867,
       "competencia": "202410",
       "desligamentos": 813,
@@ -159,11 +150,11 @@
       "secao_nome": null
     },
     {
-      "admissoes": 1182,
+      "admissoes": 1183,
       "competencia": "202602",
       "desligamentos": 809,
       "recorte": "mensal",
-      "saldo": 373,
+      "saldo": 374,
       "secao": null,
       "secao_nome": null
     },
@@ -186,11 +177,11 @@
       "secao_nome": null
     },
     {
-      "admissoes": 1042,
+      "admissoes": 1044,
       "competencia": "202605",
       "desligamentos": 815,
       "recorte": "mensal",
-      "saldo": 227,
+      "saldo": 229,
       "secao": null,
       "secao_nome": null
     },
@@ -204,139 +195,130 @@
       "secao_nome": null
     },
     {
-      "admissoes": 789,
+      "admissoes": 790,
       "competencia": "202607",
       "desligamentos": 799,
       "recorte": "mensal",
-      "saldo": -10,
+      "saldo": -9,
       "secao": null,
       "secao_nome": null
     },
     {
-      "admissoes": 883,
+      "admissoes": 893,
       "competencia": "202608",
-      "desligamentos": 836,
+      "desligamentos": 839,
       "recorte": "mensal",
-      "saldo": 47,
+      "saldo": 54,
       "secao": null,
       "secao_nome": null
     },
     {
-      "admissoes": 1612,
+      "admissoes": 890,
+      "competencia": "202609",
+      "desligamentos": 879,
+      "recorte": "mensal",
+      "saldo": 11,
+      "secao": null,
+      "secao_nome": null
+    },
+    {
+      "admissoes": 1599,
       "competencia": null,
-      "desligamentos": 1052,
+      "desligamentos": 1073,
       "recorte": "secao_12m",
-      "saldo": 560,
+      "saldo": 526,
       "secao": "N",
       "secao_nome": "Serviços administrativos"
     },
     {
-      "admissoes": 2332,
+      "admissoes": 2433,
       "competencia": null,
-      "desligamentos": 1941,
+      "desligamentos": 2018,
       "recorte": "secao_12m",
-      "saldo": 391,
+      "saldo": 415,
       "secao": "G",
       "secao_nome": "Comércio e reparação de veículos"
     },
     {
-      "admissoes": 391,
+      "admissoes": 403,
       "competencia": null,
-      "desligamentos": 282,
+      "desligamentos": 281,
       "recorte": "secao_12m",
-      "saldo": 109,
+      "saldo": 122,
       "secao": "O",
       "secao_nome": "Administração pública"
     },
     {
-      "admissoes": 814,
+      "admissoes": 816,
       "competencia": null,
-      "desligamentos": 723,
+      "desligamentos": 715,
       "recorte": "secao_12m",
-      "saldo": 91,
+      "saldo": 101,
       "secao": "I",
       "secao_nome": "Alojamento e alimentação"
     },
     {
-      "admissoes": 319,
+      "admissoes": 296,
       "competencia": null,
-      "desligamentos": 256,
+      "desligamentos": 247,
       "recorte": "secao_12m",
-      "saldo": 63,
+      "saldo": 49,
       "secao": "Q",
       "secao_nome": "Saúde e assistência social"
     },
     {
-      "admissoes": 3463,
+      "admissoes": 276,
       "competencia": null,
-      "desligamentos": 3430,
+      "desligamentos": 246,
       "recorte": "secao_12m",
-      "saldo": 33,
-      "secao": "C",
-      "secao_nome": "Indústria de transformação"
-    },
-    {
-      "admissoes": 263,
-      "competencia": null,
-      "desligamentos": 240,
-      "recorte": "secao_12m",
-      "saldo": 23,
+      "saldo": 30,
       "secao": "S",
       "secao_nome": "Outros serviços"
     },
     {
-      "admissoes": 82,
+      "admissoes": 84,
       "competencia": null,
-      "desligamentos": 64,
+      "desligamentos": 67,
       "recorte": "secao_12m",
-      "saldo": 18,
+      "saldo": 17,
       "secao": "M",
       "secao_nome": "Atividades profissionais e técnicas"
     },
     {
-      "admissoes": 210,
+      "admissoes": 206,
       "competencia": null,
-      "desligamentos": 193,
+      "desligamentos": 191,
       "recorte": "secao_12m",
-      "saldo": 17,
+      "saldo": 15,
       "secao": "H",
       "secao_nome": "Transporte e armazenagem"
     },
     {
-      "admissoes": 89,
+      "admissoes": 88,
       "competencia": null,
-      "desligamentos": 75,
+      "desligamentos": 73,
       "recorte": "secao_12m",
-      "saldo": 14,
+      "saldo": 15,
       "secao": "J",
       "secao_nome": "Informação e comunicação"
     },
     {
-      "admissoes": 27,
+      "admissoes": 30,
       "competencia": null,
-      "desligamentos": 18,
+      "desligamentos": 19,
       "recorte": "secao_12m",
-      "saldo": 9,
+      "saldo": 11,
       "secao": "L",
       "secao_nome": "Atividades imobiliárias"
     },
     {
-      "admissoes": 103,
+      "admissoes": 1,
       "competencia": null,
-      "desligamentos": 100,
-      "recorte": "secao_12m",
-      "saldo": 3,
-      "secao": "R",
-      "secao_nome": "Artes, cultura e esporte"
-    },
-    {
-      "admissoes": 73,
-      "competencia": null,
-      "desligamentos": 72,
+      "desligamentos": 0,
       "recorte": "secao_12m",
       "saldo": 1,
-      "secao": "B",
-      "secao_nome": "Indústrias extrativas"
+      "secao": "D",
+      "secao_nome": "Eletricidade e gás"
     },
     {
       "admissoes": 1,
@@ -348,45 +330,72 @@
       "secao_nome": "Serviços domésticos"
     },
     {
-      "admissoes": 331,
+      "admissoes": 97,
       "competencia": null,
-      "desligamentos": 334,
+      "desligamentos": 98,
       "recorte": "secao_12m",
-      "saldo": -3,
-      "secao": "F",
-      "secao_nome": "Construção"
+      "saldo": -1,
+      "secao": "R",
+      "secao_nome": "Artes, cultura e esporte"
     },
     {
-      "admissoes": 15,
+      "admissoes": 16,
       "competencia": null,
       "desligamentos": 19,
       "recorte": "secao_12m",
-      "saldo": -4,
+      "saldo": -3,
       "secao": "E",
       "secao_nome": "Água, esgoto e resíduos"
     },
     {
-      "admissoes": 19,
+      "admissoes": 70,
       "competencia": null,
-      "desligamentos": 24,
+      "desligamentos": 74,
       "recorte": "secao_12m",
-      "saldo": -5,
+      "saldo": -4,
+      "secao": "B",
+      "secao_nome": "Indústrias extrativas"
+    },
+    {
+      "admissoes": 17,
+      "competencia": null,
+      "desligamentos": 25,
+      "recorte": "secao_12m",
+      "saldo": -8,
       "secao": "K",
       "secao_nome": "Finanças e seguros"
     },
     {
-      "admissoes": 80,
+      "admissoes": 82,
       "competencia": null,
-      "desligamentos": 99,
+      "desligamentos": 104,
       "recorte": "secao_12m",
-      "saldo": -19,
+      "saldo": -22,
       "secao": "P",
       "secao_nome": "Educação"
     },
     {
-      "admissoes": 914,
+      "admissoes": 304,
       "competencia": null,
-      "desligamentos": 1040,
+      "desligamentos": 342,
+      "recorte": "secao_12m",
+      "saldo": -38,
+      "secao": "F",
+      "secao_nome": "Construção"
+    },
+    {
+      "admissoes": 3404,
+      "competencia": null,
+      "desligamentos": 3462,
+      "recorte": "secao_12m",
+      "saldo": -58,
+      "secao": "C",
+      "secao_nome": "Indústria de transformação"
+    },
+    {
+      "admissoes": 902,
+      "competencia": null,
+      "desligamentos": 1028,
       "recorte": "secao_12m",
       "saldo": -126,
       "secao": "A",
@@ -394,7 +403,7 @@
     }
   ],
   "fonte": {
-    "acesso_em": "2026-10-20",
+    "acesso_em": "2026-11-10",
     "licenca": "Dados abertos do governo federal",
     "nome": "MTE — Novo CAGED (microdados)",
     "url": "ftp://ftp.mtps.gov.br/pdet/microdados/NOVO%20CAGED/"
@@ -402,19 +411,19 @@
   "painel": "emprego",
   "qualidade": {
     "flag": "real",
-    "n_registros": 43,
+    "n_registros": 44,
     "notas": [
       "Saldo = admissões − desligamentos, com movimentações fora do prazo somadas e exclusões subtraídas.",
-      "Competências recentes podem mudar: declarações até 202608 já incorporadas.",
+      "Competências recentes podem mudar: declarações até 202609 já incorporadas.",
       "Faixa salarial de admissão ainda não publicada: falta tabela de salário mínimo com fonte.",
-      "Recorte por seção CNAE cobre os 12 meses até 202608.",
-      "SHA-256 dos manifestos de coleta: 39292002f0be73cc9c8b4e6ea22226a2ed7c1bb49df61c05ff76cfee4a056c75"
+      "Recorte por seção CNAE cobre os 12 meses até 202609.",
+      "SHA-256 dos manifestos de coleta: 714cab25a9801990e6a4eb33648984f12ba436b60912b7ead5dce927bcde4f06"
     ]
   },
   "referencia": {
-    "fim": "2026-08-31",
+    "fim": "2026-09-30",
     "granularidade": "mensal",
-    "inicio": "2024-09-01"
+    "inicio": "2024-10-01"
   },
   "schema_version": "1.0"
 }
