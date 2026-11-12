@@ -1,10 +1,5 @@
 {
   "competencias": {
-    "202509": {
-      "bytes": 19869754,
-      "coletado_em": "2026-10-20",
-      "sha256": "6b6af50e25a2ccbfc570bb3491412c8722cb7b05190d40a01c3f58452373d759"
-    },
     "202510": {
       "bytes": 20618895,
       "coletado_em": "2026-10-20",
@@ -51,19 +46,24 @@
       "sha256": "d2f362c7e1bc4aa5a0800424f0e665eb1a16aadad491f8cc05a7afbddb5075a9"
     },
     "202607": {
-      "bytes": 20051789,
-      "coletado_em": "2026-10-20",
-      "sha256": "12e6fcd7ef4bda02c3bb139944b28c6e93a61241fc15ebe7049200813dc29828"
+      "bytes": 20297150,
+      "coletado_em": "2026-11-12",
+      "sha256": "c82ad3db965ae04fc45d364a35a5494a2ce5b92c6fd11ad6e9658573d11a1e12"
     },
     "202608": {
-      "bytes": 20522295,
-      "coletado_em": "2026-10-20",
-      "sha256": "1f35ec2ba4546e01043b59f03c7af695fbdd7c8965feb5a498b03f228afab64a"
+      "bytes": 20808353,
+      "coletado_em": "2026-11-12",
+      "sha256": "f37d00c4d83a3f10b4a236db721e024e0da047b47c362ae5f5d857bcd9eeefa1"
+    },
+    "202609": {
+      "bytes": 20053090,
+      "coletado_em": "2026-11-12",
+      "sha256": "57bec24b23a8374ce88e207197ad68fb3fe7d4df2aa39984ed8854f8f91b90c5"
     }
   },
   "fonte": "SIH/SUS (AIH reduzida, RD) de SP, DATASUS; recorte: hospital em Porto Feliz",
-  "primeira": "202509",
-  "sha256_csv": "f7b1384c4088e9638c8848b8ecc52c6b60aa1ae7aa98049cf52a1654c782ae58",
-  "ultima": "202608",
-  "verificado_em": "2026-10-20"
+  "primeira": "202510",
+  "sha256_csv": "01d25d0a9f887f93940a4d8b2e8e3f2a3da38a9ee0e963e9e1234bd6e13c7278",
+  "ultima": "202609",
+  "verificado_em": "2026-11-12"
 }

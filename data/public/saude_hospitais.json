@@ -7,9 +7,9 @@
   "dados": [
     {
       "competencia_cnes": "202609",
-      "primeira": "202509",
+      "primeira": "202510",
       "recorte": "periodo",
-      "ultima": "202608"
+      "ultima": "202609"
     },
     {
       "cnes": "2079925",
@@ -392,13 +392,13 @@
     {
       "cnes": "2079925",
       "especialidade": "Cirúrgico",
-      "internacoes": 2496,
+      "internacoes": 2365,
       "recorte": "internacao_especialidade"
     },
     {
       "cnes": "2079925",
       "especialidade": "Clínico",
-      "internacoes": 1130,
+      "internacoes": 1074,
       "recorte": "internacao_especialidade"
     },
     {
@@ -410,71 +410,71 @@
     {
       "cnes": "2079925",
       "especialidade": "Obstétrico",
-      "internacoes": 245,
+      "internacoes": 234,
       "recorte": "internacao_especialidade"
     },
     {
       "cnes": "2079925",
       "especialidade": "Outras especialidades",
-      "internacoes": 64,
+      "internacoes": 70,
       "recorte": "internacao_especialidade"
     },
     {
       "cnes": "2079925",
       "especialidade": "Pediátrico",
-      "internacoes": 84,
+      "internacoes": 75,
       "recorte": "internacao_especialidade"
     },
     {
       "capitulo": "Doenças do olho",
       "cnes": "2079925",
-      "internacoes": 1048,
+      "internacoes": 1001,
       "recorte": "internacao_capitulo"
     },
     {
       "capitulo": "Doenças do aparelho digestivo",
       "cnes": "2079925",
-      "internacoes": 475,
+      "internacoes": 471,
       "recorte": "internacao_capitulo"
     },
     {
       "capitulo": "Doenças do aparelho urinário e genital",
       "cnes": "2079925",
-      "internacoes": 390,
+      "internacoes": 370,
       "recorte": "internacao_capitulo"
     },
     {
       "capitulo": "Gravidez, parto e puerpério",
       "cnes": "2079925",
-      "internacoes": 311,
+      "internacoes": 299,
       "recorte": "internacao_capitulo"
     },
     {
       "capitulo": "Doenças do coração e da circulação",
       "cnes": "2079925",
-      "internacoes": 275,
+      "internacoes": 255,
       "recorte": "internacao_capitulo"
     },
     {
       "capitulo": "Lesões, envenenamentos e outras causas externas",
       "cnes": "2079925",
-      "internacoes": 242,
+      "internacoes": 231,
       "recorte": "internacao_capitulo"
     },
     {
       "cnes": "2079925",
-      "dias": 9853,
+      "dias": 9343,
       "dias_uti": 0,
-      "internacoes": 4087,
+      "internacoes": 3886,
       "leitos_sus": 72,
       "meses": 12,
       "pct_de_fora": 0.7,
       "recorte": "internacao_total",
-      "uso_estimado_pct": 37.5
+      "uso_estimado_pct": 35.6
     }
   ],
   "fonte": {
-    "acesso_em": "2026-10-20",
+    "acesso_em": "2026-11-12",
     "licenca": "Dados abertos do Ministério da Saúde (DATASUS); citar a fonte",
     "nome": "CNES e SIH/SUS — DATASUS, Ministério da Saúde",
     "url": "https://datasus.saude.gov.br/"
@@ -485,17 +485,17 @@
     "n_registros": 35,
     "notas": [
       "Cadastro de estabelecimentos e leitos do CNES, competência 09/2026. O cadastro é declarado pelos próprios estabelecimentos e pode estar defasado.",
-      "Internações do SIH/SUS de 09/2025 a 08/2026: só as pagas pelo SUS, sem as de convênios e particulares. Contam hospitais localizados em Porto Feliz, inclusive pacientes de outras cidades.",
+      "Internações do SIH/SUS de 10/2025 a 09/2026: só as pagas pelo SUS, sem as de convênios e particulares. Contam hospitais localizados em Porto Feliz, inclusive pacientes de outras cidades.",
       "Não existe dado aberto de ocupação ou fila de hospital. O 'uso estimado dos leitos SUS' divide os dias de internação SUS dos últimos 12 meses pelo número de leitos SUS existentes multiplicado por 365. É uma ordem de grandeza, não a lotação do dia. Os dias de células com menos de 5 internações foram zerados por privacidade, o que subestima um pouco o valor.",
       "O uso estimado só aparece para hospitais com 20 leitos SUS ou mais.",
       "Contagem de internações e de dias não mede qualidade do hospital: depende do porte, da especialidade e da gravidade dos casos.",
-      "SHA-256 dos recortes de coleta: 364e5f59a795ba70072cb108b17aca2fedfcc5b37fca8d1b6c58a09938f3b259"
+      "SHA-256 dos recortes de coleta: aa7317bef102942b790966461b107c4e36d2b0e07493b83d1bea2fd33c8fa947"
     ]
   },
   "referencia": {
-    "fim": "2026-08-31",
+    "fim": "2026-09-30",
     "granularidade": "mensal",
-    "inicio": "2025-09-01"
+    "inicio": "2025-10-01"
   },
   "schema_version": "1.0"
 }
