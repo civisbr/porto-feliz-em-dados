@@ -8,26 +8,26 @@ ano;grupo;hora;n
 2026;furtos;06;2
 2026;furtos;07;3
 2026;furtos;08;9
-2026;furtos;09;11
+2026;furtos;09;12
 2026;furtos;10;7
-2026;furtos;11;11
+2026;furtos;11;12
 2026;furtos;12;8
 2026;furtos;13;7
 2026;furtos;14;9
-2026;furtos;15;8
+2026;furtos;15;9
 2026;furtos;16;9
 2026;furtos;17;9
-2026;furtos;18;5
-2026;furtos;19;6
-2026;furtos;20;5
-2026;furtos;21;5
-2026;furtos;22;1
+2026;furtos;18;6
+2026;furtos;19;8
+2026;furtos;20;6
+2026;furtos;21;6
+2026;furtos;22;2
 2026;furtos;23;6
-2026;furtos;A noite;19
-2026;furtos;A tarde;23
-2026;furtos;De madrugada;21
+2026;furtos;A noite;20
+2026;furtos;A tarde;26
+2026;furtos;De madrugada;22
 2026;furtos;Pela manhã;9
-2026;furtos;Sem informação;10
+2026;furtos;Sem informação;11
 2026;roubos;01;2
 2026;roubos;02;1
 2026;roubos;03;1
@@ -35,6 +35,7 @@ ano;grupo;hora;n
 2026;roubos;11;1
 2026;roubos;12;3
 2026;roubos;13;1
+2026;roubos;14;1
 2026;roubos;15;2
 2026;roubos;18;1
 2026;roubos;19;3
